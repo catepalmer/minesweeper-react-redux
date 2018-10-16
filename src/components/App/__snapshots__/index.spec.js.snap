@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:App renders the App with a game board and eighty-one squares 1`] = `
-<StyledApp>
+exports[`components:App renders the App with a game board and nine squares 1`] = `
+.c0 {
+  display: grid;
+  font-family: 'Verdana',sans-serif;
+  grid-template-areas: 'board';
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+<div
+  className="c0"
+>
   <Board>
     <Square
       index={0}
@@ -35,7 +47,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={6}
-      isMine={false}
+      isMine={true}
       key="6"
     />
     <Square
@@ -90,7 +102,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={17}
-      isMine={true}
+      isMine={false}
       key="17"
     />
     <Square
@@ -115,7 +127,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={22}
-      isMine={true}
+      isMine={false}
       key="22"
     />
     <Square
@@ -155,7 +167,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={30}
-      isMine={true}
+      isMine={false}
       key="30"
     />
     <Square
@@ -180,17 +192,17 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={35}
-      isMine={false}
+      isMine={true}
       key="35"
     />
     <Square
       index={36}
-      isMine={true}
+      isMine={false}
       key="36"
     />
     <Square
       index={37}
-      isMine={false}
+      isMine={true}
       key="37"
     />
     <Square
@@ -215,7 +227,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={42}
-      isMine={false}
+      isMine={true}
       key="42"
     />
     <Square
@@ -225,7 +237,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={44}
-      isMine={true}
+      isMine={false}
       key="44"
     />
     <Square
@@ -250,7 +262,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={49}
-      isMine={false}
+      isMine={true}
       key="49"
     />
     <Square
@@ -265,7 +277,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={52}
-      isMine={true}
+      isMine={false}
       key="52"
     />
     <Square
@@ -280,7 +292,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={55}
-      isMine={true}
+      isMine={false}
       key="55"
     />
     <Square
@@ -380,7 +392,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={75}
-      isMine={false}
+      isMine={true}
       key="75"
     />
     <Square
@@ -395,7 +407,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={78}
-      isMine={false}
+      isMine={true}
       key="78"
     />
     <Square
@@ -409,5 +421,5 @@ exports[`components:App renders the App with a game board and eighty-one squares
       key="80"
     />
   </Board>
-</StyledApp>
+</div>
 `;
