@@ -5,7 +5,7 @@ const StyledSquare = styled.div`
   border-color: hsla(0, 0%, 0%, 0.2);
   border-style: solid;
   border-width: 2px;
-  color: gray;
+  color: ${({ isMine }) => (isMine ? 'red' : 'black')};
   font-size: 4vh;
   font-weight: bold;
   line-height: 7vh;
