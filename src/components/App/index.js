@@ -1,24 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { contains, length, not, times } from 'ramda'
+import { contains, times } from 'ramda'
 
 import { Board, Square } from '..'
+import setMines from '../../utilities/setMines'
 
-const makeMines = (mines = [], idx = Math.floor(Math.random() * 81)) => {
-  if (length(mines) === 10) return mines
-  if (not(contains(idx, mines))) mines.push(idx)
-  return makeMines(mines)
-}
+const mines = setMines()
 
-const mines = makeMines()
-  
-const isMine = (idx, mines) => {
-  return (contains(idx, mines)) ? true : false
-}
-
-const makeSquares = () =>
+const makeSquares = (mines) =>
   times(
-    idx => <Square key={idx} index={idx} isMine={isMine(idx, mines)} />,
+    idx => <Square key={idx} index={idx} isMine={contains(idx, mines) ? true : false} />,
     81
   )
 
@@ -37,7 +28,7 @@ export default function App () {
   return (
     <StyledApp>
       <Board>
-        {makeSquares()}
+        {makeSquares(mines)}
       </Board>
     </StyledApp>
   )

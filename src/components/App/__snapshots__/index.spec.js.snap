@@ -67,12 +67,12 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={10}
-      isMine={true}
+      isMine={false}
       key="10"
     />
     <Square
       index={11}
-      isMine={false}
+      isMine={true}
       key="11"
     />
     <Square
@@ -82,12 +82,12 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={13}
-      isMine={true}
+      isMine={false}
       key="13"
     />
     <Square
       index={14}
-      isMine={true}
+      isMine={false}
       key="14"
     />
     <Square
@@ -107,7 +107,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={18}
-      isMine={true}
+      isMine={false}
       key="18"
     />
     <Square
@@ -157,7 +157,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={28}
-      isMine={false}
+      isMine={true}
       key="28"
     />
     <Square
@@ -187,7 +187,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={34}
-      isMine={false}
+      isMine={true}
       key="34"
     />
     <Square
@@ -217,7 +217,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={40}
-      isMine={true}
+      isMine={false}
       key="40"
     />
     <Square
@@ -257,7 +257,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={48}
-      isMine={false}
+      isMine={true}
       key="48"
     />
     <Square
@@ -272,17 +272,17 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={51}
-      isMine={true}
+      isMine={false}
       key="51"
     />
     <Square
       index={52}
-      isMine={true}
+      isMine={false}
       key="52"
     />
     <Square
       index={53}
-      isMine={true}
+      isMine={false}
       key="53"
     />
     <Square
@@ -317,7 +317,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={60}
-      isMine={false}
+      isMine={true}
       key="60"
     />
     <Square
@@ -332,17 +332,17 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={63}
-      isMine={false}
+      isMine={true}
       key="63"
     />
     <Square
       index={64}
-      isMine={true}
+      isMine={false}
       key="64"
     />
     <Square
       index={65}
-      isMine={false}
+      isMine={true}
       key="65"
     />
     <Square
@@ -372,7 +372,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={71}
-      isMine={false}
+      isMine={true}
       key="71"
     />
     <Square
@@ -392,7 +392,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
     />
     <Square
       index={75}
-      isMine={false}
+      isMine={true}
       key="75"
     />
     <Square
@@ -424,7 +424,7 @@ exports[`components:App renders the App with a game board and eighty-one squares
 </div>
 `;
 
-exports[`components:App renders the App with an isMine property 1`] = `
+exports[`components:App renders the App with an isMine property passed down 1`] = `
 .c0 {
   display: grid;
   font-family: 'Verdana',sans-serif;
@@ -491,12 +491,12 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={10}
-      isMine={true}
+      isMine={false}
       key="10"
     />
     <Square
       index={11}
-      isMine={false}
+      isMine={true}
       key="11"
     />
     <Square
@@ -506,12 +506,12 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={13}
-      isMine={true}
+      isMine={false}
       key="13"
     />
     <Square
       index={14}
-      isMine={true}
+      isMine={false}
       key="14"
     />
     <Square
@@ -531,7 +531,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={18}
-      isMine={true}
+      isMine={false}
       key="18"
     />
     <Square
@@ -581,7 +581,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={28}
-      isMine={false}
+      isMine={true}
       key="28"
     />
     <Square
@@ -611,7 +611,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={34}
-      isMine={false}
+      isMine={true}
       key="34"
     />
     <Square
@@ -641,7 +641,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={40}
-      isMine={true}
+      isMine={false}
       key="40"
     />
     <Square
@@ -681,7 +681,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={48}
-      isMine={false}
+      isMine={true}
       key="48"
     />
     <Square
@@ -696,17 +696,17 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={51}
-      isMine={true}
+      isMine={false}
       key="51"
     />
     <Square
       index={52}
-      isMine={true}
+      isMine={false}
       key="52"
     />
     <Square
       index={53}
-      isMine={true}
+      isMine={false}
       key="53"
     />
     <Square
@@ -741,7 +741,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={60}
-      isMine={false}
+      isMine={true}
       key="60"
     />
     <Square
@@ -756,17 +756,17 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={63}
-      isMine={false}
+      isMine={true}
       key="63"
     />
     <Square
       index={64}
-      isMine={true}
+      isMine={false}
       key="64"
     />
     <Square
       index={65}
-      isMine={false}
+      isMine={true}
       key="65"
     />
     <Square
@@ -796,7 +796,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={71}
-      isMine={false}
+      isMine={true}
       key="71"
     />
     <Square
@@ -816,7 +816,7 @@ exports[`components:App renders the App with an isMine property 1`] = `
     />
     <Square
       index={75}
-      isMine={false}
+      isMine={true}
       key="75"
     />
     <Square
