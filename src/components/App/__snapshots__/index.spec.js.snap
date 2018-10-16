@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:App renders the App with a game board and nine squares 1`] = `
+exports[`components:App renders the App with a game board and eighty-one squares 1`] = `
 .c0 {
   display: grid;
   font-family: 'Verdana',sans-serif;
@@ -67,7 +67,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={10}
-      isMine={false}
+      isMine={true}
       key="10"
     />
     <Square
@@ -82,17 +82,17 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={13}
-      isMine={false}
+      isMine={true}
       key="13"
     />
     <Square
       index={14}
-      isMine={false}
+      isMine={true}
       key="14"
     />
     <Square
       index={15}
-      isMine={true}
+      isMine={false}
       key="15"
     />
     <Square
@@ -107,7 +107,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={18}
-      isMine={false}
+      isMine={true}
       key="18"
     />
     <Square
@@ -157,7 +157,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={28}
-      isMine={true}
+      isMine={false}
       key="28"
     />
     <Square
@@ -187,7 +187,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={34}
-      isMine={true}
+      isMine={false}
       key="34"
     />
     <Square
@@ -197,7 +197,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={36}
-      isMine={false}
+      isMine={true}
       key="36"
     />
     <Square
@@ -217,7 +217,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={40}
-      isMine={false}
+      isMine={true}
       key="40"
     />
     <Square
@@ -242,12 +242,12 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={45}
-      isMine={true}
+      isMine={false}
       key="45"
     />
     <Square
       index={46}
-      isMine={true}
+      isMine={false}
       key="46"
     />
     <Square
@@ -272,7 +272,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={51}
-      isMine={false}
+      isMine={true}
       key="51"
     />
     <Square
@@ -282,7 +282,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={53}
-      isMine={false}
+      isMine={true}
       key="53"
     />
     <Square
@@ -317,12 +317,12 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={60}
-      isMine={true}
+      isMine={false}
       key="60"
     />
     <Square
       index={61}
-      isMine={true}
+      isMine={false}
       key="61"
     />
     <Square
@@ -332,12 +332,12 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={63}
-      isMine={true}
+      isMine={false}
       key="63"
     />
     <Square
       index={64}
-      isMine={false}
+      isMine={true}
       key="64"
     />
     <Square
@@ -357,7 +357,431 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={68}
+      isMine={false}
+      key="68"
+    />
+    <Square
+      index={69}
+      isMine={false}
+      key="69"
+    />
+    <Square
+      index={70}
+      isMine={false}
+      key="70"
+    />
+    <Square
+      index={71}
+      isMine={false}
+      key="71"
+    />
+    <Square
+      index={72}
+      isMine={false}
+      key="72"
+    />
+    <Square
+      index={73}
+      isMine={false}
+      key="73"
+    />
+    <Square
+      index={74}
+      isMine={false}
+      key="74"
+    />
+    <Square
+      index={75}
+      isMine={false}
+      key="75"
+    />
+    <Square
+      index={76}
+      isMine={false}
+      key="76"
+    />
+    <Square
+      index={77}
+      isMine={false}
+      key="77"
+    />
+    <Square
+      index={78}
+      isMine={false}
+      key="78"
+    />
+    <Square
+      index={79}
+      isMine={false}
+      key="79"
+    />
+    <Square
+      index={80}
+      isMine={false}
+      key="80"
+    />
+  </Board>
+</div>
+`;
+
+exports[`components:App renders the App with an isMine property 1`] = `
+.c0 {
+  display: grid;
+  font-family: 'Verdana',sans-serif;
+  grid-template-areas: 'board';
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+<div
+  className="c0"
+>
+  <Board>
+    <Square
+      index={0}
+      isMine={false}
+      key="0"
+    />
+    <Square
+      index={1}
+      isMine={false}
+      key="1"
+    />
+    <Square
+      index={2}
+      isMine={false}
+      key="2"
+    />
+    <Square
+      index={3}
+      isMine={false}
+      key="3"
+    />
+    <Square
+      index={4}
+      isMine={false}
+      key="4"
+    />
+    <Square
+      index={5}
+      isMine={false}
+      key="5"
+    />
+    <Square
+      index={6}
+      isMine={false}
+      key="6"
+    />
+    <Square
+      index={7}
+      isMine={false}
+      key="7"
+    />
+    <Square
+      index={8}
+      isMine={false}
+      key="8"
+    />
+    <Square
+      index={9}
+      isMine={false}
+      key="9"
+    />
+    <Square
+      index={10}
       isMine={true}
+      key="10"
+    />
+    <Square
+      index={11}
+      isMine={false}
+      key="11"
+    />
+    <Square
+      index={12}
+      isMine={false}
+      key="12"
+    />
+    <Square
+      index={13}
+      isMine={true}
+      key="13"
+    />
+    <Square
+      index={14}
+      isMine={true}
+      key="14"
+    />
+    <Square
+      index={15}
+      isMine={false}
+      key="15"
+    />
+    <Square
+      index={16}
+      isMine={false}
+      key="16"
+    />
+    <Square
+      index={17}
+      isMine={false}
+      key="17"
+    />
+    <Square
+      index={18}
+      isMine={true}
+      key="18"
+    />
+    <Square
+      index={19}
+      isMine={false}
+      key="19"
+    />
+    <Square
+      index={20}
+      isMine={false}
+      key="20"
+    />
+    <Square
+      index={21}
+      isMine={false}
+      key="21"
+    />
+    <Square
+      index={22}
+      isMine={false}
+      key="22"
+    />
+    <Square
+      index={23}
+      isMine={false}
+      key="23"
+    />
+    <Square
+      index={24}
+      isMine={false}
+      key="24"
+    />
+    <Square
+      index={25}
+      isMine={false}
+      key="25"
+    />
+    <Square
+      index={26}
+      isMine={false}
+      key="26"
+    />
+    <Square
+      index={27}
+      isMine={false}
+      key="27"
+    />
+    <Square
+      index={28}
+      isMine={false}
+      key="28"
+    />
+    <Square
+      index={29}
+      isMine={false}
+      key="29"
+    />
+    <Square
+      index={30}
+      isMine={false}
+      key="30"
+    />
+    <Square
+      index={31}
+      isMine={false}
+      key="31"
+    />
+    <Square
+      index={32}
+      isMine={false}
+      key="32"
+    />
+    <Square
+      index={33}
+      isMine={false}
+      key="33"
+    />
+    <Square
+      index={34}
+      isMine={false}
+      key="34"
+    />
+    <Square
+      index={35}
+      isMine={false}
+      key="35"
+    />
+    <Square
+      index={36}
+      isMine={true}
+      key="36"
+    />
+    <Square
+      index={37}
+      isMine={false}
+      key="37"
+    />
+    <Square
+      index={38}
+      isMine={false}
+      key="38"
+    />
+    <Square
+      index={39}
+      isMine={false}
+      key="39"
+    />
+    <Square
+      index={40}
+      isMine={true}
+      key="40"
+    />
+    <Square
+      index={41}
+      isMine={false}
+      key="41"
+    />
+    <Square
+      index={42}
+      isMine={false}
+      key="42"
+    />
+    <Square
+      index={43}
+      isMine={false}
+      key="43"
+    />
+    <Square
+      index={44}
+      isMine={false}
+      key="44"
+    />
+    <Square
+      index={45}
+      isMine={false}
+      key="45"
+    />
+    <Square
+      index={46}
+      isMine={false}
+      key="46"
+    />
+    <Square
+      index={47}
+      isMine={false}
+      key="47"
+    />
+    <Square
+      index={48}
+      isMine={false}
+      key="48"
+    />
+    <Square
+      index={49}
+      isMine={false}
+      key="49"
+    />
+    <Square
+      index={50}
+      isMine={false}
+      key="50"
+    />
+    <Square
+      index={51}
+      isMine={true}
+      key="51"
+    />
+    <Square
+      index={52}
+      isMine={true}
+      key="52"
+    />
+    <Square
+      index={53}
+      isMine={true}
+      key="53"
+    />
+    <Square
+      index={54}
+      isMine={false}
+      key="54"
+    />
+    <Square
+      index={55}
+      isMine={false}
+      key="55"
+    />
+    <Square
+      index={56}
+      isMine={false}
+      key="56"
+    />
+    <Square
+      index={57}
+      isMine={false}
+      key="57"
+    />
+    <Square
+      index={58}
+      isMine={false}
+      key="58"
+    />
+    <Square
+      index={59}
+      isMine={false}
+      key="59"
+    />
+    <Square
+      index={60}
+      isMine={false}
+      key="60"
+    />
+    <Square
+      index={61}
+      isMine={false}
+      key="61"
+    />
+    <Square
+      index={62}
+      isMine={false}
+      key="62"
+    />
+    <Square
+      index={63}
+      isMine={false}
+      key="63"
+    />
+    <Square
+      index={64}
+      isMine={true}
+      key="64"
+    />
+    <Square
+      index={65}
+      isMine={false}
+      key="65"
+    />
+    <Square
+      index={66}
+      isMine={false}
+      key="66"
+    />
+    <Square
+      index={67}
+      isMine={false}
+      key="67"
+    />
+    <Square
+      index={68}
+      isMine={false}
       key="68"
     />
     <Square
