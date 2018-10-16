@@ -32,7 +32,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={3}
-      isMine={true}
+      isMine={false}
       key="3"
     />
     <Square
@@ -47,7 +47,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={6}
-      isMine={true}
+      isMine={false}
       key="6"
     />
     <Square
@@ -92,7 +92,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={15}
-      isMine={false}
+      isMine={true}
       key="15"
     />
     <Square
@@ -157,7 +157,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={28}
-      isMine={false}
+      isMine={true}
       key="28"
     />
     <Square
@@ -187,12 +187,12 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={34}
-      isMine={false}
+      isMine={true}
       key="34"
     />
     <Square
       index={35}
-      isMine={true}
+      isMine={false}
       key="35"
     />
     <Square
@@ -202,7 +202,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={37}
-      isMine={true}
+      isMine={false}
       key="37"
     />
     <Square
@@ -227,7 +227,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={42}
-      isMine={true}
+      isMine={false}
       key="42"
     />
     <Square
@@ -242,12 +242,12 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={45}
-      isMine={false}
+      isMine={true}
       key="45"
     />
     <Square
       index={46}
-      isMine={false}
+      isMine={true}
       key="46"
     />
     <Square
@@ -262,7 +262,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={49}
-      isMine={true}
+      isMine={false}
       key="49"
     />
     <Square
@@ -277,7 +277,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={52}
-      isMine={false}
+      isMine={true}
       key="52"
     />
     <Square
@@ -317,12 +317,12 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={60}
-      isMine={false}
+      isMine={true}
       key="60"
     />
     <Square
       index={61}
-      isMine={false}
+      isMine={true}
       key="61"
     />
     <Square
@@ -332,7 +332,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={63}
-      isMine={false}
+      isMine={true}
       key="63"
     />
     <Square
@@ -357,7 +357,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={68}
-      isMine={false}
+      isMine={true}
       key="68"
     />
     <Square
@@ -377,7 +377,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={72}
-      isMine={true}
+      isMine={false}
       key="72"
     />
     <Square
@@ -392,7 +392,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={75}
-      isMine={true}
+      isMine={false}
       key="75"
     />
     <Square
@@ -407,7 +407,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={78}
-      isMine={true}
+      isMine={false}
       key="78"
     />
     <Square
@@ -417,7 +417,7 @@ exports[`components:App renders the App with a game board and nine squares 1`] =
     />
     <Square
       index={80}
-      isMine={true}
+      isMine={false}
       key="80"
     />
   </Board>
