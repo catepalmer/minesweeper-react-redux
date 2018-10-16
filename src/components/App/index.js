@@ -4,17 +4,21 @@ import { contains, length, not, times } from 'ramda'
 
 import { Board, Square } from '..'
 
-const makeSquares = () =>
-  times(
-    idx => <Square key={idx} index={idx} player={idx % 2 === 0 ? 'x' : 'o'} />,
-    81
-  )
-
   const makeMines = (mines = [], idx = Math.floor(Math.random() * 81)) => {
     if (length(mines) === 10) return mines
     if (not(contains(idx, mines))) mines.push(idx)
     return makeMines(mines)
   }
+
+  const isMine = (idx, mines) => {
+    return (contains(idx, mines)) ? true : false
+  }
+
+  const makeSquares = () =>
+  times(
+    idx => <Square key={idx} index={idx} isMine={isMine(idx, makeMines())} />,
+    81
+  )
 
 const StyledApp = styled.div`
   display: grid;

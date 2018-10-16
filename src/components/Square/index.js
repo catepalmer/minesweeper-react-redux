@@ -6,7 +6,7 @@ const StyledSquare = styled.div`
   border-style: solid;
   border-width: 2px;
   color: gray;
-  font-size: 6vh;
+  font-size: 4vh;
   font-weight: bold;
   line-height: 7vh;
   text-align: center;
@@ -14,10 +14,10 @@ const StyledSquare = styled.div`
 `
 StyledSquare.displayName = 'StyledSquare'
 
-export default function Square ({ index, player }) {
+export default function Square ({ index, isMine }) {
   return (
-    <StyledSquare index={index} player={player}>
-      {player}
+    <StyledSquare index={index} isMine={isMine}>
+      {isMine ? 'X' : 'O'}
     </StyledSquare>
   )
 }
