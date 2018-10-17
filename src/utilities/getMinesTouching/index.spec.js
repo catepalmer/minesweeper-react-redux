@@ -20,4 +20,12 @@ describe('utilities:getMinesTouching', () => {
   it('returns 2 for an edge square that is touching two mines', () => {
     expect(getMinesTouching(18, [5, 10, 17, 22, 28, 34, 49, 62, 64, 78])).toEqual(2)
   })
+
+  it('returns 3 for an edge square that is touching three mines', () => {
+    expect(getMinesTouching(44, [18, 37, 57, 65, 4, 19, 76, 35, 43, 52])).toEqual(3)
+  })
+
+  it('returns 4 for an edge square that is touching four mines', () => {
+    expect(getMinesTouching(3, [2, 4, 12, 13, 57, 19, 76, 35, 43, 52])).toEqual(4)
+  })
 })
