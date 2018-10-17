@@ -1,4 +1,4 @@
-import getMinesTouching from '.'
+import { getMinesTouching, getSquares } from '.'
 
 describe('utilities:getMinesTouching', () => {
   it('returns 1 for a square that is touching one mine', () => {
@@ -28,4 +28,29 @@ describe('utilities:getMinesTouching', () => {
   it('returns 4 for an edge square that is touching four mines', () => {
     expect(getMinesTouching(3, [2, 4, 12, 13, 57, 19, 76, 35, 43, 52])).toEqual(4)
   })
+
+  it('returns an array of the correct squares that a square in the top row is touching', () => {
+    expect(getSquares(3)).toEqual([-1, 1, 8, 9, 10])
+  })
+
+  it('returns an array of the correct squares that a square in the bottom row is touching', () => {
+    expect(getSquares(76)).toEqual([-10, -9, -8, -1, 1])
+  })
+
+  it('returns an array of the squares that a square in the top left corner is touching', () => {
+    expect(getSquares(0)).toEqual([1, 9, 10])
+  })
+
+  it('returns an array of the squares that a square in the top right corner is touching', () => {
+    expect(getSquares(8)).toEqual([-1, 8, 9])
+  })
+
+  it('returns an array of the squares that a square in the bottom right corner is touching', () => {
+    expect(getSquares(80)).toEqual([-10, -9, -1])
+  })
+
+  it('returns an array of the squares that a square in the bottom left corner is touching', () => {
+    expect(getSquares(72)).toEqual([-9, -8, 1])
+  })
+  
 })
