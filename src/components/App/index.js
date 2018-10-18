@@ -4,12 +4,14 @@ import { contains, times } from 'ramda'
 
 import { Board, Square } from '..'
 import setMines from '../../utilities/setMines'
+import { getMinesTouching } from '../../utilities/getMinesTouching'
 
 const mines = setMines()
 
 const makeSquares = (mines) =>
   times(
-    idx => <Square key={idx} index={idx} isMine={contains(idx, mines) ? true : false} />,
+    idx => <Square key={idx} index={idx} isMine={contains(idx, mines) ? true : false}
+                   minesTouching={contains(idx, mines) ? null : getMinesTouching(idx, mines)} />,
     81
   )
 

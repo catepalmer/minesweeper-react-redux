@@ -19,406 +19,487 @@ exports[`components:App renders the App with a game board and eighty-one squares
       index={0}
       isMine={false}
       key="0"
+      minesTouching={1}
     />
     <Square
       index={1}
-      isMine={false}
+      isMine={true}
       key="1"
+      minesTouching={null}
     />
     <Square
       index={2}
       isMine={false}
       key="2"
+      minesTouching={1}
     />
     <Square
       index={3}
       isMine={false}
       key="3"
+      minesTouching={1}
     />
     <Square
       index={4}
       isMine={false}
       key="4"
+      minesTouching={1}
     />
     <Square
       index={5}
       isMine={false}
       key="5"
+      minesTouching={1}
     />
     <Square
       index={6}
       isMine={false}
       key="6"
+      minesTouching={0}
     />
     <Square
       index={7}
       isMine={false}
       key="7"
+      minesTouching={0}
     />
     <Square
       index={8}
       isMine={false}
       key="8"
+      minesTouching={0}
     />
     <Square
       index={9}
       isMine={false}
       key="9"
+      minesTouching={3}
     />
     <Square
       index={10}
       isMine={false}
       key="10"
+      minesTouching={3}
     />
     <Square
       index={11}
-      isMine={true}
+      isMine={false}
       key="11"
+      minesTouching={2}
     />
     <Square
       index={12}
       isMine={false}
       key="12"
+      minesTouching={1}
     />
     <Square
       index={13}
-      isMine={false}
+      isMine={true}
       key="13"
+      minesTouching={null}
     />
     <Square
       index={14}
       isMine={false}
       key="14"
+      minesTouching={2}
     />
     <Square
       index={15}
       isMine={false}
       key="15"
+      minesTouching={1}
     />
     <Square
       index={16}
       isMine={false}
       key="16"
+      minesTouching={1}
     />
     <Square
       index={17}
       isMine={false}
       key="17"
+      minesTouching={0}
     />
     <Square
       index={18}
-      isMine={false}
+      isMine={true}
       key="18"
+      minesTouching={null}
     />
     <Square
       index={19}
-      isMine={false}
+      isMine={true}
       key="19"
+      minesTouching={null}
     />
     <Square
       index={20}
       isMine={false}
       key="20"
+      minesTouching={1}
     />
     <Square
       index={21}
       isMine={false}
       key="21"
+      minesTouching={1}
     />
     <Square
       index={22}
       isMine={false}
       key="22"
+      minesTouching={1}
     />
     <Square
       index={23}
       isMine={false}
       key="23"
+      minesTouching={2}
     />
     <Square
       index={24}
-      isMine={false}
+      isMine={true}
       key="24"
+      minesTouching={null}
     />
     <Square
       index={25}
       isMine={false}
       key="25"
+      minesTouching={1}
     />
     <Square
       index={26}
       isMine={false}
       key="26"
+      minesTouching={0}
     />
     <Square
       index={27}
       isMine={false}
       key="27"
+      minesTouching={3}
     />
     <Square
       index={28}
-      isMine={true}
+      isMine={false}
       key="28"
+      minesTouching={3}
     />
     <Square
       index={29}
       isMine={false}
       key="29"
+      minesTouching={2}
     />
     <Square
       index={30}
       isMine={false}
       key="30"
+      minesTouching={0}
     />
     <Square
       index={31}
       isMine={false}
       key="31"
+      minesTouching={0}
     />
     <Square
       index={32}
       isMine={false}
       key="32"
+      minesTouching={1}
     />
     <Square
       index={33}
       isMine={false}
       key="33"
+      minesTouching={1}
     />
     <Square
       index={34}
-      isMine={true}
+      isMine={false}
       key="34"
+      minesTouching={1}
     />
     <Square
       index={35}
       isMine={false}
       key="35"
+      minesTouching={0}
     />
     <Square
       index={36}
-      isMine={true}
+      isMine={false}
       key="36"
+      minesTouching={1}
     />
     <Square
       index={37}
-      isMine={false}
+      isMine={true}
       key="37"
+      minesTouching={null}
     />
     <Square
       index={38}
       isMine={false}
       key="38"
+      minesTouching={1}
     />
     <Square
       index={39}
       isMine={false}
       key="39"
+      minesTouching={0}
     />
     <Square
       index={40}
       isMine={false}
       key="40"
+      minesTouching={0}
     />
     <Square
       index={41}
       isMine={false}
       key="41"
+      minesTouching={0}
     />
     <Square
       index={42}
       isMine={false}
       key="42"
+      minesTouching={0}
     />
     <Square
       index={43}
       isMine={false}
       key="43"
+      minesTouching={0}
     />
     <Square
       index={44}
       isMine={false}
       key="44"
+      minesTouching={0}
     />
     <Square
       index={45}
       isMine={false}
       key="45"
+      minesTouching={1}
     />
     <Square
       index={46}
       isMine={false}
       key="46"
+      minesTouching={1}
     />
     <Square
       index={47}
       isMine={false}
       key="47"
+      minesTouching={1}
     />
     <Square
       index={48}
-      isMine={true}
+      isMine={false}
       key="48"
+      minesTouching={0}
     />
     <Square
       index={49}
       isMine={false}
       key="49"
+      minesTouching={0}
     />
     <Square
       index={50}
       isMine={false}
       key="50"
+      minesTouching={1}
     />
     <Square
       index={51}
       isMine={false}
       key="51"
+      minesTouching={2}
     />
     <Square
       index={52}
       isMine={false}
       key="52"
+      minesTouching={2}
     />
     <Square
       index={53}
       isMine={false}
       key="53"
+      minesTouching={1}
     />
     <Square
       index={54}
       isMine={false}
       key="54"
+      minesTouching={0}
     />
     <Square
       index={55}
       isMine={false}
       key="55"
+      minesTouching={0}
     />
     <Square
       index={56}
       isMine={false}
       key="56"
+      minesTouching={0}
     />
     <Square
       index={57}
       isMine={false}
       key="57"
+      minesTouching={0}
     />
     <Square
       index={58}
       isMine={false}
       key="58"
+      minesTouching={0}
     />
     <Square
       index={59}
       isMine={false}
       key="59"
+      minesTouching={1}
     />
     <Square
       index={60}
       isMine={true}
       key="60"
+      minesTouching={null}
     />
     <Square
       index={61}
-      isMine={false}
+      isMine={true}
       key="61"
+      minesTouching={null}
     />
     <Square
       index={62}
       isMine={false}
       key="62"
+      minesTouching={1}
     />
     <Square
       index={63}
-      isMine={true}
+      isMine={false}
       key="63"
+      minesTouching={0}
     />
     <Square
       index={64}
       isMine={false}
       key="64"
+      minesTouching={0}
     />
     <Square
       index={65}
-      isMine={true}
+      isMine={false}
       key="65"
+      minesTouching={0}
     />
     <Square
       index={66}
       isMine={false}
       key="66"
+      minesTouching={0}
     />
     <Square
       index={67}
       isMine={false}
       key="67"
+      minesTouching={1}
     />
     <Square
       index={68}
       isMine={false}
       key="68"
+      minesTouching={2}
     />
     <Square
       index={69}
       isMine={false}
       key="69"
+      minesTouching={4}
     />
     <Square
       index={70}
       isMine={false}
       key="70"
+      minesTouching={3}
     />
     <Square
       index={71}
-      isMine={true}
+      isMine={false}
       key="71"
+      minesTouching={2}
     />
     <Square
       index={72}
       isMine={false}
       key="72"
+      minesTouching={0}
     />
     <Square
       index={73}
       isMine={false}
       key="73"
+      minesTouching={0}
     />
     <Square
       index={74}
       isMine={false}
       key="74"
+      minesTouching={0}
     />
     <Square
       index={75}
-      isMine={true}
+      isMine={false}
       key="75"
+      minesTouching={0}
     />
     <Square
       index={76}
       isMine={false}
       key="76"
+      minesTouching={1}
     />
     <Square
       index={77}
-      isMine={false}
+      isMine={true}
       key="77"
+      minesTouching={null}
     />
     <Square
       index={78}
       isMine={false}
       key="78"
+      minesTouching={2}
     />
     <Square
       index={79}
-      isMine={false}
+      isMine={true}
       key="79"
+      minesTouching={null}
     />
     <Square
       index={80}
       isMine={false}
       key="80"
+      minesTouching={1}
     />
   </Board>
 </div>
@@ -443,406 +524,487 @@ exports[`components:App renders the App with an isMine property passed down 1`] 
       index={0}
       isMine={false}
       key="0"
+      minesTouching={1}
     />
     <Square
       index={1}
-      isMine={false}
+      isMine={true}
       key="1"
+      minesTouching={null}
     />
     <Square
       index={2}
       isMine={false}
       key="2"
+      minesTouching={1}
     />
     <Square
       index={3}
       isMine={false}
       key="3"
+      minesTouching={1}
     />
     <Square
       index={4}
       isMine={false}
       key="4"
+      minesTouching={1}
     />
     <Square
       index={5}
       isMine={false}
       key="5"
+      minesTouching={1}
     />
     <Square
       index={6}
       isMine={false}
       key="6"
+      minesTouching={0}
     />
     <Square
       index={7}
       isMine={false}
       key="7"
+      minesTouching={0}
     />
     <Square
       index={8}
       isMine={false}
       key="8"
+      minesTouching={0}
     />
     <Square
       index={9}
       isMine={false}
       key="9"
+      minesTouching={3}
     />
     <Square
       index={10}
       isMine={false}
       key="10"
+      minesTouching={3}
     />
     <Square
       index={11}
-      isMine={true}
+      isMine={false}
       key="11"
+      minesTouching={2}
     />
     <Square
       index={12}
       isMine={false}
       key="12"
+      minesTouching={1}
     />
     <Square
       index={13}
-      isMine={false}
+      isMine={true}
       key="13"
+      minesTouching={null}
     />
     <Square
       index={14}
       isMine={false}
       key="14"
+      minesTouching={2}
     />
     <Square
       index={15}
       isMine={false}
       key="15"
+      minesTouching={1}
     />
     <Square
       index={16}
       isMine={false}
       key="16"
+      minesTouching={1}
     />
     <Square
       index={17}
       isMine={false}
       key="17"
+      minesTouching={0}
     />
     <Square
       index={18}
-      isMine={false}
+      isMine={true}
       key="18"
+      minesTouching={null}
     />
     <Square
       index={19}
-      isMine={false}
+      isMine={true}
       key="19"
+      minesTouching={null}
     />
     <Square
       index={20}
       isMine={false}
       key="20"
+      minesTouching={1}
     />
     <Square
       index={21}
       isMine={false}
       key="21"
+      minesTouching={1}
     />
     <Square
       index={22}
       isMine={false}
       key="22"
+      minesTouching={1}
     />
     <Square
       index={23}
       isMine={false}
       key="23"
+      minesTouching={2}
     />
     <Square
       index={24}
-      isMine={false}
+      isMine={true}
       key="24"
+      minesTouching={null}
     />
     <Square
       index={25}
       isMine={false}
       key="25"
+      minesTouching={1}
     />
     <Square
       index={26}
       isMine={false}
       key="26"
+      minesTouching={0}
     />
     <Square
       index={27}
       isMine={false}
       key="27"
+      minesTouching={3}
     />
     <Square
       index={28}
-      isMine={true}
+      isMine={false}
       key="28"
+      minesTouching={3}
     />
     <Square
       index={29}
       isMine={false}
       key="29"
+      minesTouching={2}
     />
     <Square
       index={30}
       isMine={false}
       key="30"
+      minesTouching={0}
     />
     <Square
       index={31}
       isMine={false}
       key="31"
+      minesTouching={0}
     />
     <Square
       index={32}
       isMine={false}
       key="32"
+      minesTouching={1}
     />
     <Square
       index={33}
       isMine={false}
       key="33"
+      minesTouching={1}
     />
     <Square
       index={34}
-      isMine={true}
+      isMine={false}
       key="34"
+      minesTouching={1}
     />
     <Square
       index={35}
       isMine={false}
       key="35"
+      minesTouching={0}
     />
     <Square
       index={36}
-      isMine={true}
+      isMine={false}
       key="36"
+      minesTouching={1}
     />
     <Square
       index={37}
-      isMine={false}
+      isMine={true}
       key="37"
+      minesTouching={null}
     />
     <Square
       index={38}
       isMine={false}
       key="38"
+      minesTouching={1}
     />
     <Square
       index={39}
       isMine={false}
       key="39"
+      minesTouching={0}
     />
     <Square
       index={40}
       isMine={false}
       key="40"
+      minesTouching={0}
     />
     <Square
       index={41}
       isMine={false}
       key="41"
+      minesTouching={0}
     />
     <Square
       index={42}
       isMine={false}
       key="42"
+      minesTouching={0}
     />
     <Square
       index={43}
       isMine={false}
       key="43"
+      minesTouching={0}
     />
     <Square
       index={44}
       isMine={false}
       key="44"
+      minesTouching={0}
     />
     <Square
       index={45}
       isMine={false}
       key="45"
+      minesTouching={1}
     />
     <Square
       index={46}
       isMine={false}
       key="46"
+      minesTouching={1}
     />
     <Square
       index={47}
       isMine={false}
       key="47"
+      minesTouching={1}
     />
     <Square
       index={48}
-      isMine={true}
+      isMine={false}
       key="48"
+      minesTouching={0}
     />
     <Square
       index={49}
       isMine={false}
       key="49"
+      minesTouching={0}
     />
     <Square
       index={50}
       isMine={false}
       key="50"
+      minesTouching={1}
     />
     <Square
       index={51}
       isMine={false}
       key="51"
+      minesTouching={2}
     />
     <Square
       index={52}
       isMine={false}
       key="52"
+      minesTouching={2}
     />
     <Square
       index={53}
       isMine={false}
       key="53"
+      minesTouching={1}
     />
     <Square
       index={54}
       isMine={false}
       key="54"
+      minesTouching={0}
     />
     <Square
       index={55}
       isMine={false}
       key="55"
+      minesTouching={0}
     />
     <Square
       index={56}
       isMine={false}
       key="56"
+      minesTouching={0}
     />
     <Square
       index={57}
       isMine={false}
       key="57"
+      minesTouching={0}
     />
     <Square
       index={58}
       isMine={false}
       key="58"
+      minesTouching={0}
     />
     <Square
       index={59}
       isMine={false}
       key="59"
+      minesTouching={1}
     />
     <Square
       index={60}
       isMine={true}
       key="60"
+      minesTouching={null}
     />
     <Square
       index={61}
-      isMine={false}
+      isMine={true}
       key="61"
+      minesTouching={null}
     />
     <Square
       index={62}
       isMine={false}
       key="62"
+      minesTouching={1}
     />
     <Square
       index={63}
-      isMine={true}
+      isMine={false}
       key="63"
+      minesTouching={0}
     />
     <Square
       index={64}
       isMine={false}
       key="64"
+      minesTouching={0}
     />
     <Square
       index={65}
-      isMine={true}
+      isMine={false}
       key="65"
+      minesTouching={0}
     />
     <Square
       index={66}
       isMine={false}
       key="66"
+      minesTouching={0}
     />
     <Square
       index={67}
       isMine={false}
       key="67"
+      minesTouching={1}
     />
     <Square
       index={68}
       isMine={false}
       key="68"
+      minesTouching={2}
     />
     <Square
       index={69}
       isMine={false}
       key="69"
+      minesTouching={4}
     />
     <Square
       index={70}
       isMine={false}
       key="70"
+      minesTouching={3}
     />
     <Square
       index={71}
-      isMine={true}
+      isMine={false}
       key="71"
+      minesTouching={2}
     />
     <Square
       index={72}
       isMine={false}
       key="72"
+      minesTouching={0}
     />
     <Square
       index={73}
       isMine={false}
       key="73"
+      minesTouching={0}
     />
     <Square
       index={74}
       isMine={false}
       key="74"
+      minesTouching={0}
     />
     <Square
       index={75}
-      isMine={true}
+      isMine={false}
       key="75"
+      minesTouching={0}
     />
     <Square
       index={76}
       isMine={false}
       key="76"
+      minesTouching={1}
     />
     <Square
       index={77}
-      isMine={false}
+      isMine={true}
       key="77"
+      minesTouching={null}
     />
     <Square
       index={78}
       isMine={false}
       key="78"
+      minesTouching={2}
     />
     <Square
       index={79}
-      isMine={false}
+      isMine={true}
       key="79"
+      minesTouching={null}
     />
     <Square
       index={80}
       isMine={false}
       key="80"
+      minesTouching={1}
     />
   </Board>
 </div>

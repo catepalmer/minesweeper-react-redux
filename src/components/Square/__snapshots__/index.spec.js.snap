@@ -5,7 +5,6 @@ exports[`components:Square renders the Square with the proper cursor if a click 
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 2px;
-  color: black;
   cursor: pointer;
   font-size: 4vh;
   font-weight: bold;
@@ -17,30 +16,7 @@ exports[`components:Square renders the Square with the proper cursor if a click 
 <div
   className="c0"
   onClick={[Function]}
->
-  O
-</div>
-`;
-
-exports[`components:Square renders the Square with the proper styles for a mine in the bottom left square 1`] = `
-.c0 {
-  border-color: hsla(0,0%,0%,0.2);
-  border-style: solid;
-  border-width: 2px;
-  color: red;
-  cursor: default;
-  font-size: 4vh;
-  font-weight: bold;
-  line-height: 7vh;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-<div
-  className="c0"
->
-  X
-</div>
+/>
 `;
 
 exports[`components:Square renders the Square with the proper styles for a mine in the top left square 1`] = `
@@ -60,7 +36,9 @@ exports[`components:Square renders the Square with the proper styles for a mine 
 <div
   className="c0"
 >
-  X
+  <styled.img
+    src="mine.png"
+  />
 </div>
 `;
 
@@ -81,16 +59,36 @@ exports[`components:Square renders the Square with the proper styles for a mine 
 <div
   className="c0"
 >
-  X
+  <styled.img
+    src="mine.png"
+  />
 </div>
 `;
 
-exports[`components:Square renders the Square with the proper styles for a non-mine in the bottom right square 1`] = `
+exports[`components:Square renders the Square with the proper styles for a non-mine touching 0 mines in the bottom right square 1`] = `
 .c0 {
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 2px;
-  color: black;
+  cursor: default;
+  font-size: 4vh;
+  font-weight: bold;
+  line-height: 7vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`components:Square renders the Square with the proper styles for a non-mine touching 2 mines in the bottom left square 1`] = `
+.c0 {
+  border-color: hsla(0,0%,0%,0.2);
+  border-style: solid;
+  border-width: 2px;
+  color: #307944;
   cursor: default;
   font-size: 4vh;
   font-weight: bold;
@@ -102,16 +100,16 @@ exports[`components:Square renders the Square with the proper styles for a non-m
 <div
   className="c0"
 >
-  O
+  2
 </div>
 `;
 
-exports[`components:Square renders the Square with the proper styles for a non-mine in the top left square 1`] = `
+exports[`components:Square renders the Square with the proper styles for a non-mine touching 4 mines in the top left square 1`] = `
 .c0 {
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 2px;
-  color: black;
+  color: #09114C;
   cursor: default;
   font-size: 4vh;
   font-weight: bold;
@@ -123,6 +121,6 @@ exports[`components:Square renders the Square with the proper styles for a non-m
 <div
   className="c0"
 >
-  O
+  4
 </div>
 `;

@@ -16,9 +16,9 @@ describe('components:Square', () => {
     ).toMatchSnapshot()
   })
 
-  it('renders the Square with the proper styles for a non-mine in the top left square', () => {
+  it('renders the Square with the proper styles for a non-mine touching 4 mines in the top left square', () => {
     expect(
-      toJson(shallow(<Square isMine={false} index={0} />).dive())
+      toJson(shallow(<Square isMine={false} minesTouching={4} index={0} />).dive())
     ).toMatchSnapshot()
   })
 
@@ -28,15 +28,16 @@ describe('components:Square', () => {
     ).toMatchSnapshot()
   })
 
-  it('renders the Square with the proper styles for a mine in the bottom left square', () => {
+  it('renders the Square with the proper styles for a non-mine touching 2 mines in the bottom left square', () => {
     expect(
-      toJson(shallow(<Square isMine={true} index={72} />).dive())
+      toJson(shallow(<Square isMine={false} minesTouching={2} index={72} />).dive())
     ).toMatchSnapshot()
   })
 
-  it('renders the Square with the proper styles for a non-mine in the bottom right square', () => {
+  it('renders the Square with the proper styles for a non-mine touching 0 mines in the bottom right square', () => {
     expect(
-      toJson(shallow(<Square isMine={false} index={80} />).dive())
+      toJson(shallow(<Square isMine={false} minesTouching={0} index={80} />).dive())
     ).toMatchSnapshot()
   })
+
 })

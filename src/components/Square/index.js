@@ -2,11 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import { isUndefined } from 'ramda-adjunct'
 
+import flag from '../../images/flag.png'
+import mine from '../../images/mine.png'
+
+const StyledImage = styled.img`
+  height: 5vh;
+  width: 5vh;
+  margin: auto;
+  margin-top: 0.5vh;
+`
+
 const StyledSquare = styled.div`
   border-color: hsla(0, 0%, 0%, 0.2);
   border-style: solid;
   border-width: 2px;
-  color: ${({ isMine }) => (isMine ? 'red' : 'black')};
+  color: ${({ isMine, minesTouching }) => (isMine ? 'red' : ['#2939BD', '#307944', '#B52435', '#09114C', '#5E2123', '#306664', '#1A1A1A', '#757575'][minesTouching - 1])};
   cursor: ${({ onClick }) => (isUndefined(onClick) ? 'default' : 'pointer')};
   font-size: 4vh;
   font-weight: bold;
@@ -16,10 +26,11 @@ const StyledSquare = styled.div`
 `
 StyledSquare.displayName = 'StyledSquare'
 
-export default function Square ({ handleClick, index, isMine }) {
+export default function Square ({ handleClick, index, isMine, minesTouching }) {
   return (
-    <StyledSquare index={index} isMine={isMine} onClick={handleClick}>
-      {isMine ? 'X' : 'O'}
+    <StyledSquare index={index} isMine={isMine} minesTouching={minesTouching} onClick={handleClick}>
+      {isMine ? <StyledImage src={mine}></StyledImage>
+              : (minesTouching === 0) ? '' : minesTouching}
     </StyledSquare>
   )
 }
