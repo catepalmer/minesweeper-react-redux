@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import { contains, times } from 'ramda'
 
 import { Board, Square } from '..'
-import setMines from '../../utilities/setMines'
-import { getMinesTouching } from '../../utilities/getMinesTouching'
+import { checkIfPlayed, getMinesTouching, setMines } from '../../utilities'
 
 const mines = setMines()
 

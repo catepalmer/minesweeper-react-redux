@@ -1,3 +1,5 @@
 import setMines from './setMines'
+import { getMinesTouching } from './getMinesTouching'
+import checkIfPlayed from './checkIfPlayed'
 
-export { setMines }
+export { checkIfPlayed, getMinesTouching, setMines }
