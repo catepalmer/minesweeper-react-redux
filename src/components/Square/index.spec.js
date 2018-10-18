@@ -6,7 +6,7 @@ import Square from '.'
 describe('components:Square', () => {
   it('renders the Square with the proper cursor if a click handler is provided', () => {
     expect(
-      toJson(shallow(<Square handleClick={() => null} index={0} />).dive())
+      toJson(shallow(<Square handleClick={() => null} index={0} isMine={false} minesTouching={1} />).dive())
     ).toMatchSnapshot()
   })
 

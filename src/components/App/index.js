@@ -7,12 +7,24 @@ import { checkIfPlayed, getMinesTouching, setMines } from '../../utilities'
 
 const mines = setMines()
 
-const makeSquares = (mines) =>
-  times(
-    idx => <Square key={idx} index={idx} isMine={contains(idx, mines) ? true : false}
-                   minesTouching={contains(idx, mines) ? null : getMinesTouching(idx, mines)} />,
-    81
-  )
+function makeSquares (mines, moves) {
+  return times(square => {
+    const isPlayed = checkIfPlayed(square, moves)
+
+    return (isPlayed === false)
+      ? <Square
+        key={square}
+        handleClick={() => console.log(`Square ${square}`)}
+        index={square}
+        />
+        : <Square
+        key={square}
+        index={square}
+        isMine={contains(square, mines) ? true : false}
+        minesTouching={contains(square, mines) ? null : getMinesTouching(square, mines)}
+        />
+  }, 81)
+}
 
 const StyledApp = styled.div`
   display: grid;
@@ -25,11 +37,11 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-export default function App () {
+export default function App ({ moves = [] }) {
   return (
     <StyledApp>
       <Board>
-        {makeSquares(mines)}
+        {makeSquares(mines, moves)}
       </Board>
     </StyledApp>
   )
