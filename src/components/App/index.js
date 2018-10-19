@@ -42,7 +42,7 @@ function App ({ handleMinesSet }) {
   console.log(`From App component: minesSet: ${handleMinesSet}`)
   return (
     <StyledApp>
-      <StartButton>START GAME</StartButton>
+      <StartButton onSubmit={handleMinesSet}>NEW GAME</StartButton>
       <Board>
         {times(square => <Square
                          key={square}

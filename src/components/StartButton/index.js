@@ -1,6 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
 
-const StartButton = styled.button`
+const StyledStartButton = styled.button`
   align-self: center;
   background: 'gray';
   color: 'black';
@@ -11,6 +12,12 @@ const StartButton = styled.button`
   width: 40vh;
 `
 
-StartButton.displayName = 'StartButton'
+StyledStartButton.displayName = 'StyledStartButton'
 
-export default StartButton
+export default function StartButton({ handleMinesSet }) {
+  return <StyledStartButton>
+    <form>
+      <input onSumbit={handleMinesSet}>START GAME</input>
+    </form>
+  </StyledStartButton>
+}
