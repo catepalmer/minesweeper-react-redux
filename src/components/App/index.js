@@ -6,10 +6,11 @@ import { times } from 'ramda'
 import { Board } from '..'
 import { Square } from '../../containers'
 
-import { minesSet } from '../../state'
+import { getMines, minesSet } from '../../state'
 import { setMines } from '../../utilities'
 
-function mapStateToProps({ mines }) {
+function mapStateToProps(state) {
+  const mines = getMines(state)
   console.log(`From mapStateToProps in App container: mines: ${mines}`)
 
   return {
@@ -22,7 +23,7 @@ function mapDispatchToProps(dispatch) {
     console.log(`From mapDispatchToProps in App container: mines: ${mines}`)
   
     return {
-      minesSet: () => dispatch(minesSet(mines))
+      handleMinesSet: () => dispatch(minesSet(mines))
     }
   }
 
@@ -37,15 +38,15 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-function App ({ minesSet }) {
-  console.log(`From App component: minesSet: ${minesSet}`)
+function App ({ handleMinesSet }) {
+  console.log(`From App component: minesSet: ${handleMinesSet}`)
   return (
     <StyledApp>
       <Board>
         {times(square => <Square
                          key={square}
                          index={square}
-                         onLoad={minesSet}
+                         onLoad={handleMinesSet}
                          />, 81)}
       </Board>
     </StyledApp>
