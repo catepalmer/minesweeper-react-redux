@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { times } from 'ramda'
 
 import { Board } from '..'
-import { App, Square } from '../../containers'
+import { Square } from '../../containers'
 
 const StyledApp = styled.div`
   display: grid;
