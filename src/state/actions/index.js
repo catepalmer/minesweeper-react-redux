@@ -1,5 +1,13 @@
-// src/state/actions/index.js
-import { SQUARE_CLICKED } from '..'
+import { MINES_SET, SQUARE_CLICKED } from '..'
+
+function minesSet (mines) {
+    return {
+      type: MINES_SET,
+      payload: {
+        mines
+      }
+    }
+  }
 
 function squareClicked (square) {
   return {
@@ -10,4 +18,4 @@ function squareClicked (square) {
   }
 }
 
-export { squareClicked }
+export { minesSet, squareClicked }

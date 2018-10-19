@@ -1,2 +1,2 @@
-// src/state/constants.js
+export const MINES_SET = 'MINES_SET'
 export const SQUARE_CLICKED = 'SQUARE_CLICKED'

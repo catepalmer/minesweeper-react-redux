@@ -1,12 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { contains, times } from 'ramda'
+import { times } from 'ramda'
 
 import { Board } from '..'
-import { Square } from '../../containers'
-import { getMinesTouching, setMines } from '../../utilities'
-
-const mines = setMines()
+import { App, Square } from '../../containers'
 
 const StyledApp = styled.div`
   display: grid;
@@ -19,17 +16,34 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-export function App ({ markSquare, moves }) {
+export default function App () {
   return (
     <StyledApp>
       <Board>
         {times(square => <Square
                          key={square}
                          index={square}
-                         isMine={contains(square, mines) ? true : false}
-                         minesTouching={contains(square, mines) ? null : getMinesTouching(square, mines)}
                          />, 81)}
       </Board>
     </StyledApp>
   )
 }
+
+
+
+// import { connect } from 'react-redux'
+
+// import App from '../../components/App'
+// import { minesSet } from '../../state'
+// import { setMines } from '../../utilities'
+
+// const mines = setMines()
+
+// function mapDispatchToProps(dispatch) {
+
+//   return {
+//     mines: () => dispatch(minesSet(mines))
+//   }
+// }
+
+// export default connect(null, mapDispatchToProps)(App)

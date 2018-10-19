@@ -16,7 +16,7 @@ const StyledSquare = styled.div`
   border-color: hsla(0, 0%, 0%, 0.2);
   border-style: solid;
   border-width: 2px;
-  color: ${({ isMine, minesTouching }) => (isMine ? 'red' : ['#2939BD', '#307944', '#B52435', '#09114C', '#5E2123', '#306664', '#1A1A1A', '#757575'][minesTouching - 1])};
+  color: ${({ isMine, minesTouching }) => (isMine ? '' : ['#2939BD', '#307944', '#B52435', '#09114C', '#5E2123', '#306664', '#1A1A1A', '#757575'][minesTouching - 1])};
   cursor: ${({ onClick }) => (isUndefined(onClick) ? 'default' : 'pointer')};
   font-size: 4vh;
   font-weight: bold;
@@ -27,10 +27,10 @@ const StyledSquare = styled.div`
 StyledSquare.displayName = 'StyledSquare'
 
 export default function Square ({ handleClick, index, isMine, isPlayed, minesTouching }) {
-  return (isPlayed === false)
-    ? <StyledSquare index={index} onClick={handleClick} />
-    : <StyledSquare index={index} isMine={isMine} minesTouching={minesTouching}>
+  return isPlayed
+    ? <StyledSquare index={index} isMine={isMine} minesTouching={minesTouching}>
         {isMine ? <StyledImage src={mine}></StyledImage>
                 : (minesTouching === 0) ? '' : minesTouching}
       </StyledSquare>
+    : <StyledSquare index={index} onClick={handleClick} />
 }

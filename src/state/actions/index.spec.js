@@ -1,4 +1,3 @@
-// src/state/actions/index.spec.js
 import { squareClicked } from '.'
 import { SQUARE_CLICKED } from '..'
 
