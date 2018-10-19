@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { times } from 'ramda'
 
-import { Board } from '..'
+import { Board, StartButton } from '..'
 import { Square } from '../../containers'
 
 import { getMines, minesSet } from '../../state'
@@ -42,6 +42,7 @@ function App ({ handleMinesSet }) {
   console.log(`From App component: minesSet: ${handleMinesSet}`)
   return (
     <StyledApp>
+      <StartButton>START GAME</StartButton>
       <Board>
         {times(square => <Square
                          key={square}
