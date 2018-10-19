@@ -2,7 +2,7 @@ import { isUndefined } from 'ramda-adjunct'
 
 import { MINES_SET, SQUARE_CLICKED } from '..'
 
-const initialState = { moves: [] }
+const initialState = { mines: [], moves: [] }
 
 function rootReducer (state = initialState, { payload = {}, type }) {
   switch (type) {

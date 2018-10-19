@@ -4,13 +4,21 @@ import App from '../../components/App'
 import { minesSet } from '../../state'
 import { setMines } from '../../utilities'
 
-const mines = setMines()
-
-function mapDispatchToProps(dispatch) {
+function mapStateToProps({ mines }) {
+  console.log(`From mapStateToProps in App container: mines: ${mines}`)
 
   return {
-    mines: () => dispatch(minesSet(mines))
+    mines
   }
 }
 
-export default connect(null, mapDispatchToProps)(App)
+function mapDispatchToProps(dispatch) {
+const mines = setMines()
+  console.log(`From mapDispatchToProps in App container: mines: ${mines}`)
+
+  return {
+    minesSet: () => dispatch(minesSet(mines))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
