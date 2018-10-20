@@ -1,7 +1,7 @@
-export function getMoves ({ moves }) {
+export function getMoves (moves) {
     return moves
   }
 
-  export function getMines ({ mines }) {
+  export function getMines (mines) {
       return mines
   }

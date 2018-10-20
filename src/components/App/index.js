@@ -3,29 +3,29 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { times } from 'ramda'
 
-import { Board, StartButton } from '..'
+import { Board } from '..'
 import { Square } from '../../containers'
 
 import { getMines, minesSet } from '../../state'
 import { setMines } from '../../utilities'
 
 function mapStateToProps(state) {
-  const mines = getMines(state)
-  console.log(`From mapStateToProps in App container: mines: ${mines}`)
+  const mines = getMines(state.mines)
+  console.log(`From the mapStateToProps in App: mines: ${mines}`)
 
   return {
     mines
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  const mines = setMines()
-    console.log(`From mapDispatchToProps in App container: mines: ${mines}`)
+// function mapDispatchToProps(dispatch) {
+//   const mines = setMines()
+//   console.log(`From the mapDispatchToProps in App: mines: ${mines}, minesSet: ${minesSet}`)
   
-    return {
-      handleMinesSet: () => dispatch(minesSet(mines))
-    }
-  }
+//     return {
+//       handleMinesSet: () => dispatch(minesSet(mines))
+//     }
+//   }
 
 const StyledApp = styled.div`
   display: grid;
@@ -38,20 +38,21 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-function App ({ handleMinesSet }) {
-  console.log(`From App component: minesSet: ${handleMinesSet}`)
+function App () {
+  const mines = setMines()
+  console.log(`mines: ${mines}`)
   return (
     <StyledApp>
-      <StartButton onSubmit={handleMinesSet}>NEW GAME</StartButton>
       <Board>
         {times(square => <Square
                          key={square}
                          index={square}
-                         onLoad={handleMinesSet}
+                         mines={mines}
+                        //  onLoad={handleMinesSet()}
                          />, 81)}
       </Board>
     </StyledApp>
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, null)(App)
