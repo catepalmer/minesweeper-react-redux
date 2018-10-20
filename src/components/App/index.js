@@ -24,11 +24,7 @@ export default function App () {
   return (
     <StyledApp>
       <Board>
-        {times(square => <Square
-                         key={square}
-                         index={square}
-                         mines={mines}
-                         />, 81)}
+        {times(square => <Square key={square} index={square} mines={mines} />, 81)}
       </Board>
     </StyledApp>
   )

@@ -1,3 +1,3 @@
-export function getMoves (moves) {
+export function getMoves ({ moves }) {
     return moves
   }
