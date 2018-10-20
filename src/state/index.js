@@ -1,3 +1,5 @@
+import { blankSquareClicked } from './actions'
+import { BLANK_SQUARE_CLICKED } from './constants'
 import { squareClicked } from './actions'
 import { SQUARE_CLICKED } from './constants'
 import { initialState, rootReducer } from './reducers'
@@ -5,6 +7,8 @@ import { getMoves } from './selectors'
 import configureStore from './store'
 
 export {
+  blankSquareClicked,
+  BLANK_SQUARE_CLICKED,
   configureStore,
   getMoves,
   initialState,
