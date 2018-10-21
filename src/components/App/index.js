@@ -20,7 +20,7 @@ StyledApp.displayName = 'StyledApp'
 
 export default function App () {
   const mines = setMines()
-
+  
   return (
     <StyledApp>
       <Board>

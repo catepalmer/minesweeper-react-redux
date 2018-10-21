@@ -1,25 +1,18 @@
-import { forEach } from 'ramda'
+import { concat } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
-import { BLANK_SQUARE_CLICKED, SQUARE_CLICKED } from '..'
+import { SQUARE_CLICKED } from '..'
 
 const initialState = { moves: [] }
 
 function rootReducer (state = initialState, { payload = {}, type }) {
   switch (type) {
-    case BLANK_SQUARE_CLICKED:
-    return {
-      ...state,
-      moves: isUndefined(payload.square)
-        ? state.moves
-        : [...state.moves, payload.square, forEach((square => square), payload.squaresTouching)]
-    }
     case SQUARE_CLICKED:
       return {
         ...state,
-        moves: isUndefined(payload.square)
+        moves: isUndefined(payload.squares)
           ? state.moves
-          : [...state.moves, payload.square]
+          : concat(state.moves, payload.squares)
       }
     default:
       return state

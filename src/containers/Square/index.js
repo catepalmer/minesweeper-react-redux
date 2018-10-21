@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import Square from '../../components/Square'
-import { blankSquareClicked, getMoves, squareClicked } from '../../state'
+import { getMoves, squareClicked } from '../../state'
 import { checkIfPlayed } from '../../utilities'
 
 function mapStateToProps (state, { index }) {
@@ -12,10 +12,9 @@ function mapStateToProps (state, { index }) {
   }
 }
 
-function mapDispatchToProps (dispatch, { index }) {
+function mapDispatchToProps (dispatch, { squaresToReveal }) {
   return {
-    handleClick: () => dispatch(squareClicked(index)),
-    handleClickBlank: () => dispatch(blankSquareClicked(index))
+    handleClick: () => dispatch(squareClicked(squaresToReveal))
   }
 }
 

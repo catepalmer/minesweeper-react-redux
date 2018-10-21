@@ -1,25 +1,12 @@
-import { BLANK_SQUARE_CLICKED, SQUARE_CLICKED } from '..'
-import { getSquaresTouching } from '../../utilities'
+import { SQUARE_CLICKED } from '..'
 
-function blankSquareClicked (square) {
-    const squaresTouching = getSquaresTouching(square)
-
-    return {
-      type: BLANK_SQUARE_CLICKED,
-      payload: {
-        square,
-        squaresTouching
-      }
-    }
-  }
-
-function squareClicked (square) {
+function squareClicked (squares) {
   return {
     type: SQUARE_CLICKED,
     payload: {
-      square
+      squares
     }
   }
 }
 
-export { blankSquareClicked, squareClicked }
+export { squareClicked }

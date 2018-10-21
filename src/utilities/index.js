@@ -1,6 +1,6 @@
 import setMines from './setMines'
 import getMinesTouching from './getMinesTouching'
-import getSquaresTouching from './getSquaresTouching'
+import getSquaresToReveal from './getSquaresToReveal'
 import checkIfPlayed from './checkIfPlayed'
 
-export { checkIfPlayed, getSquaresTouching, getMinesTouching, setMines }
+export { checkIfPlayed, getMinesTouching, getSquaresToReveal, setMines }

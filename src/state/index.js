@@ -7,8 +7,6 @@ import { getMoves } from './selectors'
 import configureStore from './store'
 
 export {
-  blankSquareClicked,
-  BLANK_SQUARE_CLICKED,
   configureStore,
   getMoves,
   initialState,
