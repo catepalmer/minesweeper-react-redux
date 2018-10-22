@@ -6,18 +6,15 @@ import getSquares from '../getSquares'
 export default function getSquaresToReveal(index, mines, squaresToReveal = []) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
-  const isNotRevealed = isUndefined(find(index)(squaresToReveal))
-  const squaresTouching = filter(isNotRevealed, map((square => square + index), getSquares(index)))
 
-
-  console.log(`From the getSquaresTouching utility function: isMine: ${isMine}, minesTouching: ${minesTouching}, isNotRevealed: ${isNotRevealed}, squaresTouching: ${squaresTouching}`)
-  console.log(`From the getSquaresTouching utility function: index: ${index}, mines: ${mines}, squaresToReveal: ${squaresToReveal}`)
   if (minesTouching === 0 && isMine === false) {
+    const squaresTouching = filter((square => isUndefined(find(square)(squaresToReveal))), (map((square => square + index), getSquares(index))))
     forEach((square => {
       squaresToReveal.push(square)
-      // getSquaresToReveal(square, mines, squaresToReveal)
+      getSquaresToReveal(square, mines, squaresToReveal)
       return squaresToReveal
     }), squaresTouching)
   }
+
   return prepend(index, squaresToReveal)
 }

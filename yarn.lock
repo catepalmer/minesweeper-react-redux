@@ -6507,7 +6507,7 @@ railroad-diagrams@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
 
-ramda-adjunct@^2.6.0:
+ramda-adjunct@^2.10.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/ramda-adjunct/-/ramda-adjunct-2.10.0.tgz#94fbb3377a6ef01e6be869a0c2c236ba66393708"
 
