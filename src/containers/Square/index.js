@@ -12,9 +12,9 @@ function mapStateToProps (state, { index }) {
   }
 }
 
-function mapDispatchToProps (dispatch, { squaresToReveal }) {
+function mapDispatchToProps (dispatch, { index }) {
   return {
-    handleClick: () => dispatch(squareClicked(squaresToReveal))
+    handleClick: () => dispatch(squareClicked(index))
   }
 }
 

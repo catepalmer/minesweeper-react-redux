@@ -6,7 +6,7 @@ import { isUndefined } from 'ramda-adjunct'
 // import flag from '../../images/flag.png'
 import mine from '../../images/mine.png'
 
-import { getMinesTouching, getSquaresToReveal } from '../../utilities'
+import { getMinesTouching } from '../../utilities'
 
 const StyledImage = styled.img`
   height: 5vh;
@@ -32,12 +32,11 @@ StyledSquare.displayName = 'StyledSquare'
 export default function Square ({ handleClick, index, isPlayed, mines }) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
-  const squaresToReveal = getSquaresToReveal(index, mines)
 
   return isPlayed
     ? <StyledSquare index={index} isMine={isMine} isPlayed={isPlayed} minesTouching={minesTouching}>
         {isMine ? <StyledImage src={mine}></StyledImage>
                 : (minesTouching === 0) ? '' : minesTouching}
       </StyledSquare>
-    : <StyledSquare index={index} isPlayed={isPlayed} onClick={handleClick} squaresToReveal={squaresToReveal} />
+    : <StyledSquare index={index} isPlayed={isPlayed} onClick={handleClick} />
 }
