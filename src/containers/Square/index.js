@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { forEach } from 'ramda'
+// import { forEach } from 'ramda'
 
 import Square from '../../components/Square'
 import { getMoves, squareClicked } from '../../state'
@@ -16,8 +16,12 @@ function mapStateToProps (state, { index }) {
 function mapDispatchToProps (dispatch, { index, squaresTouching }) {
   return {
     handleClick: () => dispatch(squareClicked(index)),
-    handleClickBlank: () => forEach((square => dispatch(squareClicked(square))), squaresTouching)
+    handleClickBlank: () => dispatch(squareClicked(index))
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Square)
+
+
+
+// handleClickBlank: () => forEach((square => dispatch(squareClicked(square))), squaresTouching)
