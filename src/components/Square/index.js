@@ -29,14 +29,16 @@ const StyledSquare = styled.div`
 `
 StyledSquare.displayName = 'StyledSquare'
 
-export default function Square ({ handleClick, index, isPlayed, mines }) {
+export default function Square ({ handleClick, handleClickBlank, index, isPlayed, mines }) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
+  const squaresTouching =
 
   return isPlayed
     ? <StyledSquare index={index} isMine={isMine} isPlayed={isPlayed} minesTouching={minesTouching}>
         {isMine ? <StyledImage src={mine}></StyledImage>
                 : (minesTouching === 0) ? '' : minesTouching}
       </StyledSquare>
-    : <StyledSquare index={index} isPlayed={isPlayed} onClick={handleClick} />
+    : (isMine || minesTouching > 0) ? <StyledSquare index={index} isPlayed={isPlayed} onClick={handleClick} />
+                                    : <StyledSquare index={index} isPlayed={isPlayed} onClick={handleClickBlank} squaresTouching={squaresTouching} />
 }

@@ -1,11 +1,11 @@
 import { contains, reduce } from 'ramda'
-import getSquares from '../getSquares'
+import getSquaresTouching from '../getSquaresTouching'
 
 export default function getMinesTouching (square, mines) {
-  const squares = getSquares(square)
+  const squares = getSquaresTouching(square)
   
   return reduce((acc, val) => {
-    (contains((square + val), mines)) ? acc++ : acc
+    (contains(val, mines)) ? acc++ : acc
       return acc
   }, 0, squares)
 }
