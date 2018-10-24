@@ -1,4 +1,4 @@
-import { concat, contains, find, forEach, append, uniq } from 'ramda'
+import { append, concat, contains, find, forEach, not, uniq } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 import getMinesTouching from '../getMinesTouching'
 import getSquaresTouching from '../getSquaresTouching'
@@ -7,8 +7,8 @@ export default function getSquaresToReveal(index, mines, squaresToReveal = [], s
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
   const squaresToRevealNew = append(index, squaresToReveal)
-  const squaresTouchingNew = squaresTouching
-  const nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
+  let squaresTouchingNew = squaresTouching
+  let nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
 
   if (isMine || isUndefined(nextSquareTouching)) return squaresToRevealNew
   if (minesTouching > 0) return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
