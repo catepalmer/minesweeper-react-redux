@@ -13,10 +13,9 @@ function mapStateToProps (state, { index }) {
   }
 }
 
-function mapDispatchToProps (dispatch, { index, squaresTouching }) {
+function mapDispatchToProps (dispatch, { squaresToReveal }) {
   return {
-    handleClick: () => dispatch(squareClicked(index)),
-    handleClickBlank: () => dispatch(squareClicked(index))
+    handleClick: () => dispatch(squareClicked(squaresToReveal))
   }
 }
 

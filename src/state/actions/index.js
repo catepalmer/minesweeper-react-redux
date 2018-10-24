@@ -1,10 +1,10 @@
 import { SQUARE_CLICKED } from '..'
 
-function squareClicked (square) {
+function squareClicked (squares) {
   return {
     type: SQUARE_CLICKED,
     payload: {
-      square
+      squares
     }
   }
 }

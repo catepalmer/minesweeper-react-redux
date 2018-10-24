@@ -1,4 +1,4 @@
-import { concat } from 'ramda'
+import { concat, uniq } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 import { SQUARE_CLICKED } from '..'
@@ -10,9 +10,9 @@ function rootReducer (state = initialState, { payload = {}, type }) {
     case SQUARE_CLICKED:
       return {
         ...state,
-        moves: isUndefined(payload.square)
+        moves: isUndefined(payload.squares)
           ? state.moves
-          : [...state.moves, payload.square]
+          : uniq(concat(state.moves, payload.squares))
       }
     default:
       return state
