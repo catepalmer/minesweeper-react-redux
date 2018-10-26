@@ -6,9 +6,14 @@ import getSquaresTouching from '../getSquaresTouching'
 export default function getSquaresToReveal(index, mines, squaresToReveal = [], squaresTouching = []) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
-  const squaresToRevealNew = append(index, squaresToReveal)
-  let squaresTouchingNew = squaresTouching
-  let nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
+  const squaresToRevealNew = append(index, [...squaresToReveal])
+  let squaresTouchingNew = [...squaresTouching]
+  let newSquare
+
+  forEach((sq => (not(contains(sq, [squaresToRevealNew]))) ? newSquare = sq : ''), squaresTouchingNew)
+
+  return newSquareToReveal
+  }
 
   if (isMine || isUndefined(nextSquareTouching)) return squaresToRevealNew
   if (minesTouching > 0) return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
@@ -18,6 +23,30 @@ export default function getSquaresToReveal(index, mines, squaresToReveal = [], s
 
   return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
 }
+
+
+
+
+// import { append, concat, contains, find, forEach, not, uniq } from 'ramda'
+// import { isUndefined } from 'ramda-adjunct'
+// import getMinesTouching from '../getMinesTouching'
+// import getSquaresTouching from '../getSquaresTouching'
+
+// export default function getSquaresToReveal(index, mines, squaresToReveal = [], squaresTouching = []) {
+//   const isMine = contains(index, mines)
+//   const minesTouching = getMinesTouching(index, mines)
+//   const squaresToRevealNew = append(index, [...squaresToReveal])
+//   let squaresTouchingNew = [...squaresTouching]
+//   let nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
+
+//   if (isMine || isUndefined(nextSquareTouching)) return squaresToRevealNew
+//   if (minesTouching > 0) return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
+  
+//   squaresTouchingNew = uniq(concat(getSquaresTouching(index), squaresTouching))
+//   nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
+
+//   return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
+// }
 
 
 
