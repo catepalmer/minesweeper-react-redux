@@ -6,7 +6,7 @@ import { isUndefined } from 'ramda-adjunct'
 // import flag from '../../images/flag.png'
 import mine from '../../images/mine.png'
 
-import { getMinesTouching, getSquaresToReveal } from '../../utilities'
+import { getMinesTouching } from '../../utilities'
 
 const StyledImage = styled.img`
   height: 5vh;
@@ -16,6 +16,7 @@ const StyledImage = styled.img`
 `
 
 const StyledSquare = styled.div`
+  background-color: ${({ isMine, isPlayed, minesTouching }) => (isMine === false && isPlayed && minesTouching === 0) ? '#F3E6FF' : ''};
   border-color: hsla(0, 0%, 0%, 0.2);
   border-style: solid;
   border-width: 2px;
