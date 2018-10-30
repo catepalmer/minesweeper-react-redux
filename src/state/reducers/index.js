@@ -10,9 +10,9 @@ function rootReducer (state = initialState, { payload = {}, type }) {
     case SQUARE_CLICKED:
       return {
         ...state,
-        moves: isUndefined(payload.squares)
+        moves: isUndefined(payload.square)
           ? state.moves
-          : uniq(concat(state.moves, payload.squares))
+          : [...state.moves, payload.square]
       }
     default:
       return state
