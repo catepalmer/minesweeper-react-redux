@@ -6,23 +6,51 @@ import getSquaresTouching from '../getSquaresTouching'
 export default function getSquaresToReveal(index, mines, squaresToReveal = [], squaresTouching = []) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
-  const squaresToRevealNew = append(index, [...squaresToReveal])
-  let squaresTouchingNew = [...squaresTouching]
-  let newSquare
-
-  forEach((sq => (not(contains(sq, [squaresToRevealNew]))) ? newSquare = sq : ''), squaresTouchingNew)
-
-  return newSquareToReveal
-  }
-
-  if (isMine || isUndefined(nextSquareTouching)) return squaresToRevealNew
-  if (minesTouching > 0) return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
+  squaresToReveal = append(index, [...squaresToReveal])
+  let squaresNotRevealed = []
   
-  squaresTouchingNew = uniq(concat(getSquaresTouching(index), squaresTouching))
-  nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
-
-  return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
+  if (isMine) return squaresToReveal
+  if (minesTouching === 0) squaresTouching = uniq(concat(getSquaresTouching(index), [...squaresTouching]))
+  
+  forEach((square => (not(contains(square, [squaresToReveal]))) ? squaresNotRevealed = append(square, squaresNotRevealed) : ''), squaresTouching)
+  
+  if (length(squaresNotRevealed) === 0) return squaresToReveal
+  
+  return getSquaresToReveal(squaresNotRevealed[0], mines, squaresToReveal, squaresTouching)
 }
+
+
+
+
+
+// export default function getSquaresToReveal(index, mines, squaresToReveal = [], squaresTouching = []) {
+//   const isMine = contains(index, mines)
+//   const minesTouching = getMinesTouching(index, mines)
+//   squaresToReveal = append(index, [...squaresToReveal])
+
+
+
+//   forEach((sq => (not(contains(sq, [squaresToRevealNew]))) ? newSquare = sq : ''), squaresTouching)
+
+//   return newSquareToReveal
+//   }
+
+//   if (isMine || isUndefined(nextSquareTouching)) return squaresToReveal
+//   if (minesTouching > 0) return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
+  
+//   squaresTouchingNew = uniq(concat(getSquaresTouching(index), squaresTouching))
+//   nextSquareTouching = find(not(forEach((x => x), squaresTouchingNew)))(squaresToRevealNew)
+
+//   return getSquaresToReveal(nextSquareTouching, mines, squaresToRevealNew, squaresTouchingNew)
+// }
+
+// Need to pseudocode this out: We pass in the index of the square we're checking and the mines array.
+// We check if the square we've passed in is a mine - if it is, we return squaresToReveal as an empty array
+// (for now - will figure out what to do when a mine is clicked later). We also check how many mines the square
+// that's been passed in is touching - if it's touching more than 0, we just add this square to the squaresToReveal
+// array and then return this without running the getSquaresToReveal function any more times.
+// If it's touching 0 squares though, we want to add all the squares it's touching that aren't already in the
+// squaresToReveal array to the squaresToReveal array. Then
 
 
 
