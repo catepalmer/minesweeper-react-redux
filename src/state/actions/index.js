@@ -1,11 +1,10 @@
 import { GAME_LOST, GAME_WON, SQUARE_CLICKED } from '..'
 
-function gameLost (square, mines) {
+function gameLost (square) {
   return {
     type: GAME_LOST,
     payload: {
-      square,
-      mines
+      square
     }
   }
 }
