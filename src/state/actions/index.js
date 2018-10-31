@@ -1,13 +1,4 @@
-import { GAME_LOST, GAME_WON, MINE_CLICKED, SQUARE_CLICKED } from '..'
-
-function gameLost (square) {
-  return {
-    type: GAME_LOST,
-    payload: {
-      square
-    }
-  }
-}
+import { MINE_CLICKED, SQUARE_CLICKED } from '..'
 
 function mineClicked (square) {
   return {
@@ -27,4 +18,4 @@ function squareClicked (square) {
   }
 }
 
-export { gameLost, mineClicked, squareClicked }
+export { mineClicked, squareClicked }

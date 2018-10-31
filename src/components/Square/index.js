@@ -29,49 +29,45 @@ const StyledSquare = styled.div`
 StyledSquare.defaultName = 'StyledSquare'
 
 const SquarePlayed = StyledSquare.extend`
-  background-color: ${({ isMine, isPlayed, minesTouching }) => (isMine === false && isPlayed && minesTouching === 0) ? '#F3E6FF' : ''};
-  color: ${({ isMine, minesTouching }) => (isMine ? '' : ['#2939BD', '#307944', '#B52435', '#09114C', '#5E2123', '#306664', '#1A1A1A', '#757575'][minesTouching - 1])};
+  background-color: ${({ isLosingSquare, minesTouching }) => isLosingSquare ? '#CC0000'
+                                                                            : (minesTouching === 0) ? '#EEEEEE' : ''};
+  color: ${({ minesTouching }) => ['#2939BD', '#307944', '#B52435', '#09114C', '#5E2123', '#306664', '#1A1A1A', '#757575'][minesTouching - 1]};
 `
 SquarePlayed.defaultName = 'SquarePlayed'
-
-const SquareLost = StyledSquare.extend`
-  background-color: 'red';
-`
-SquareLost.defaultName = 'SquareLost'
 
 const SquarePlayable = StyledSquare.extend`
   cursor: pointer;
 `
 SquarePlayable.defaultName = 'SquarePlayable'
 
+
 export default function Square ({
   handleClick,
   handleMineClick,
   index,
   isLosingSquare,
+  losingSquare,
   isPlayed,
   mines
 }) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
 
-  if (isUndefined(isLosingSquare)) {
+  if (isUndefined(losingSquare)) {
     return isPlayed
-      ? <SquarePlayed index={index} isMine={isMine} isPlayed={isPlayed} minesTouching={minesTouching} >
-          {isMine ? <StyledImage src={mine}></StyledImage>
-                  : (minesTouching === 0) ? '' : minesTouching}
+      ? <SquarePlayed index={index} minesTouching={minesTouching} >
+          {(minesTouching === 0) ? '' : minesTouching}
         </SquarePlayed>
-      : isMine ? <SquarePlayable index={index} isPlayed={isPlayed} onClick={handleMineClick} />
-               : <SquarePlayable index={index} isPlayed={isPlayed} onClick={handleClick} />
+      : isMine ? <SquarePlayable index={index} onClick={handleMineClick} />
+               : <SquarePlayable index={index} onClick={handleClick} />
   }
 
-  return isLosingSquare
-    ? <SquareLost index={index}>
+  return isMine
+    ? <SquarePlayed index={index} isLosingSquare={isLosingSquare} >
         <StyledImage src={mine}></StyledImage>
-      </SquareLost>
-    : isPlayed ? <SquarePlayed index={index} isMine={isMine} isPlayed={isPlayed} minesTouching={minesTouching} >
-                   {isMine ? <StyledImage src={mine}></StyledImage>
-                           : (minesTouching === 0) ? '' : minesTouching}
+      </SquarePlayed>
+    : isPlayed ? <SquarePlayed index={index} minesTouching={minesTouching} >
+                   {(minesTouching === 0) ? '' : minesTouching}
                  </SquarePlayed>
                : <StyledSquare index={index} />
 }

@@ -1,3 +1,3 @@
-export default function checkIfLosingSquare (square, losingSquare = '') {
-  return (square === losingSquare)
+export default function checkIfLosingSquare (square, state) {
+  return (square === state.losingSquare)
 }

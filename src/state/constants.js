@@ -1,3 +1,2 @@
-export const GAME_LOST = 'GAME_LOST'
-export const GAME_WON = 'GAME_WON'
+export const MINE_CLICKED = 'MINE_CLICKED'
 export const SQUARE_CLICKED = 'SQUARE_CLICKED'

@@ -1,17 +1,12 @@
 import { isUndefined } from 'ramda-adjunct'
 
-import { GAME_LOST, GAME_WON, MINE_CLICKED, SQUARE_CLICKED } from '..'
+import { MINE_CLICKED, SQUARE_CLICKED } from '..'
 
 const initialState = { moves: [] }
 
 function rootReducer (state = initialState, { payload = {}, type }) {
   const { square } = payload
   switch (type) {
-    case GAME_LOST:
-      return {
-        ...state,
-        losingSquare: square
-      }
       case MINE_CLICKED:
       return {
         ...state,
