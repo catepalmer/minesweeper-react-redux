@@ -1,5 +1,5 @@
-import { gameLost, gameWon, squareClicked } from './actions'
-import { GAME_LOST, GAME_WON, SQUARE_CLICKED } from './constants'
+import { gameLost, gameWon, mineClicked, squareClicked } from './actions'
+import { GAME_LOST, GAME_WON, MINE_CLICKED, SQUARE_CLICKED } from './constants'
 import { initialState, rootReducer } from './reducers'
 import { getLosingSquare, getMoves } from './selectors'
 import configureStore from './store'
@@ -13,6 +13,8 @@ export {
   getLosingSquare,
   getMoves,
   initialState,
+  MINE_CLICKED,
+  mineClicked,
   rootReducer,
   SQUARE_CLICKED,
   squareClicked
