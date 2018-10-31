@@ -4,6 +4,7 @@ import { contains } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 // import flag from '../../images/flag.png'
+import ken from '../../images/ken.jpg'
 import mine from '../../images/mine.png'
 
 import { getMinesTouching } from '../../utilities'
@@ -13,6 +14,12 @@ const StyledImage = styled.img`
   width: 5vh;
   margin: auto;
   margin-top: 0.5vh;
+`
+
+const StyledKen = styled.img`
+  height: 6.5vh;
+  width: 6.5vh;
+  margin: auto;
 `
 
 const StyledSquare = styled.div`
@@ -56,7 +63,8 @@ export default function Square ({
   if (isUndefined(losingSquare)) {
     return isPlayed
       ? <SquarePlayed index={index} minesTouching={minesTouching} >
-          {(minesTouching === 0) ? '' : minesTouching}
+          {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
+                                 : minesTouching}
         </SquarePlayed>
       : isMine ? <SquarePlayable index={index} onClick={handleMineClick} />
                : <SquarePlayable index={index} onClick={handleClick} />
@@ -67,7 +75,8 @@ export default function Square ({
         <StyledImage src={mine}></StyledImage>
       </SquarePlayed>
     : isPlayed ? <SquarePlayed index={index} minesTouching={minesTouching} >
-                   {(minesTouching === 0) ? '' : minesTouching}
+                   {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
+                                          : minesTouching}
                  </SquarePlayed>
                : <StyledSquare index={index} />
 }
