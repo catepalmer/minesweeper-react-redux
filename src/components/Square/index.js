@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { contains, not } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
-// import flag from '../../images/flag.png'
+import flag from '../../images/flag.png'
 import ken from '../../images/ken.jpg'
 import mine from '../../images/mine.png'
 
@@ -63,6 +63,11 @@ export default function Square ({
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
   console.log(`isFlagged: ${isFlagged}`)
+
+  if (isFlagged)
+    return <StyledSquare index={index} onContextMenu={handleRightClick}>
+             <StyledImage src={flag}></StyledImage>
+           </StyledSquare>
 
   if (isUndefined(losingSquare)) {
     return gameIsWon ? isMine ? <SquarePlayed index={index}/>
