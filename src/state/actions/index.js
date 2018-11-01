@@ -1,4 +1,4 @@
-import { MINE_CLICKED, SQUARE_CLICKED } from '..'
+import { MINE_CLICKED, SQUARE_CLICKED, SQUARE_RIGHT_CLICKED } from '..'
 
 function mineClicked (square) {
   return {
@@ -18,4 +18,13 @@ function squareClicked (square) {
   }
 }
 
-export { mineClicked, squareClicked }
+function squareRightClicked (square) {
+  return {
+    type: SQUARE_RIGHT_CLICKED,
+    payload: {
+      square
+    }
+  }
+}
+
+export { mineClicked, squareClicked, squareRightClicked }
