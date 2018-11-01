@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { contains } from 'ramda'
+import { contains, not } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 // import flag from '../../images/flag.png'
@@ -63,13 +63,17 @@ export default function Square ({
   console.log(`gameIsWon: ${gameIsWon}`)
 
   if (isUndefined(losingSquare)) {
-    return isPlayed
-      ? <SquarePlayed index={index} minesTouching={minesTouching} >
-          {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
-                                 : minesTouching}
-        </SquarePlayed>
-      : isMine ? <SquarePlayable index={index} onClick={handleMineClick} />
-               : <SquarePlayable index={index} onClick={handleClick} />
+    return gameIsWon ? isMine ? <SquarePlayed index={index}/>
+                              : <SquarePlayed index={index} minesTouching={minesTouching} >
+                                  {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
+                                                         : minesTouching}
+                                </SquarePlayed>
+                     : isPlayed ? <SquarePlayed index={index} minesTouching={minesTouching} >
+                                    {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
+                                                           : minesTouching}
+                                  </SquarePlayed>
+                                : isMine ? <SquarePlayable index={index} onClick={handleMineClick} />
+                                         : <SquarePlayable index={index} onClick={handleClick} />
   }
 
   return isMine
@@ -82,3 +86,41 @@ export default function Square ({
                  </SquarePlayed>
                : <StyledSquare index={index} />
 }
+
+
+
+
+// export default function Square ({
+//   gameIsWon,
+//   handleClick,
+//   handleMineClick,
+//   index,
+//   isLosingSquare,
+//   losingSquare,
+//   isPlayed,
+//   mines
+// }) {
+//   const isMine = contains(index, mines)
+//   const minesTouching = getMinesTouching(index, mines)
+//   console.log(`gameIsWon: ${gameIsWon}`)
+
+//   if (isUndefined(losingSquare)) {
+//     return (isPlayed || (gameIsWon && not(isMine)))
+//       ? <SquarePlayed index={index} minesTouching={minesTouching} >
+//           {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
+//                                  : minesTouching}
+//         </SquarePlayed>
+//       : isMine ? <SquarePlayable index={index} onClick={handleMineClick} />
+//                : <SquarePlayable index={index} onClick={handleClick} />
+//   }
+
+//   return isMine
+//     ? <SquarePlayed index={index} isLosingSquare={isLosingSquare} >
+//         <StyledImage src={mine}></StyledImage>
+//       </SquarePlayed>
+//     : isPlayed ? <SquarePlayed index={index} minesTouching={minesTouching} >
+//                    {(minesTouching === 0) ? <StyledKen src={ken}></StyledKen>
+//                                           : minesTouching}
+//                  </SquarePlayed>
+//                : <StyledSquare index={index} />
+// }
