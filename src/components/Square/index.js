@@ -49,6 +49,7 @@ SquarePlayable.defaultName = 'SquarePlayable'
 
 
 export default function Square ({
+  gameIsWon,
   handleClick,
   handleMineClick,
   index,
@@ -59,6 +60,7 @@ export default function Square ({
 }) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
+  console.log(`gameIsWon: ${gameIsWon}`)
 
   if (isUndefined(losingSquare)) {
     return isPlayed
