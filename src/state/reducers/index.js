@@ -1,9 +1,9 @@
-import { not } from 'ramda'
+import { not, times } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 import { MINE_CLICKED, SQUARE_CLICKED, SQUARE_RIGHT_CLICKED } from '..'
 
-const initialState = { moves: [], isFlagged: false }
+const initialState = { moves: [], isFlagged: times((x => false), 81) }
 
 function rootReducer (state = initialState, { payload = {}, type }) {
   const { square } = payload
@@ -21,7 +21,7 @@ function rootReducer (state = initialState, { payload = {}, type }) {
       case SQUARE_RIGHT_CLICKED:
       return {
         ...state,
-        isFlagged: not(state.isFlagged)
+        isFlagged: [...state.isFlagged, state.isFlagged[square] = not(state.isFlagged[square])]
       }
     default:
       return state

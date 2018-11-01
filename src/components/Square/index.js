@@ -64,7 +64,7 @@ export default function Square ({
   const minesTouching = getMinesTouching(index, mines)
   console.log(`isFlagged: ${isFlagged}`)
 
-  if (isFlagged)
+  if (isFlagged[index])
     return <StyledSquare index={index} onContextMenu={handleRightClick}>
              <StyledImage src={flag}></StyledImage>
            </StyledSquare>
