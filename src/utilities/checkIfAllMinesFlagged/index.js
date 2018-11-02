@@ -1,11 +1,12 @@
-import { equals, sort } from 'ramda'
+import { append, equals, forEach, sort } from 'ramda'
 
 export default function checkIfAllMinesFlagged (mines, { isFlagged }) {
   const sortedMines = sort(((a, b) => a - b), mines)
   const sortedFlags = []
 
-  for (let i = 0; i < isFlagged.length; i++) {
-    if (isFlagged[i]) sortedFlags.push(i)
-  }
+  forEach(((val, i) => {
+    if (val) append(i, sortedFlags)
+  }), isFlagged)
+
   return equals(sortedMines, sortedFlags)
 }
