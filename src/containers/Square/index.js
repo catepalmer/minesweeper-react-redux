@@ -4,16 +4,17 @@ import { isUndefined } from 'ramda-adjunct'
 
 import Square from '../../components/Square'
 import { getLosingSquare, getFlagged, getMoves, mineClicked, squareClicked, squareRightClicked } from '../../state'
-import { checkIfLosingSquare, checkIfPlayed } from '../../utilities'
+import { checkIfAllMinesFlagged, checkIfLosingSquare, checkIfPlayed } from '../../utilities'
 
 function mapStateToProps (state, { index, mines }) {
   const moves = getMoves(state)
   const nonMines = filter((x => isNil(find(equals(x))(mines))), times(identity, 81))
   const isFlagged = getFlagged(state)
+  const allMinesFlagged = checkIfAllMinesFlagged(mines, state)
   const losingSquare = getLosingSquare(state)
   const isLosingSquare = checkIfLosingSquare(index, state)
   const gameIsLost = not(isUndefined(losingSquare))
-  const gameIsWon = equals(sort(((a, b) => a - b), moves), nonMines)
+  const gameIsWon = (equals(sort(((a, b) => a - b), moves), nonMines) && allMinesFlagged)
 
   return gameIsLost
     ? { isLosingSquare, losingSquare, isFlagged, isPlayed: checkIfPlayed(index, moves) }
