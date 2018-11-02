@@ -1,4 +1,4 @@
-import { not, times } from 'ramda'
+import { map, not, times } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 import { MINE_CLICKED, SQUARE_CLICKED, SQUARE_RIGHT_CLICKED } from '..'
@@ -18,10 +18,11 @@ function rootReducer (state = initialState, { payload = {}, type }) {
         ...state,
         moves: isUndefined(square) ? state.moves : [...state.moves, square]
       }
-      case SQUARE_RIGHT_CLICKED:
+    case SQUARE_RIGHT_CLICKED:
       return {
         ...state,
-        isFlagged: [...state.isFlagged, state.isFlagged[square] = not(state.isFlagged[square])]
+        isFlagged: state.isFlagged.map((bool, i) => i === square ? not(bool)
+                                                                 : bool)
       }
     default:
       return state
