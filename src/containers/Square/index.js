@@ -16,8 +16,8 @@ function mapStateToProps (state, { index, mines }) {
   const gameIsWon = equals(sort(((a, b) => a - b), moves), nonMines)
 
   return gameIsLost
-    ? { isLosingSquare, losingSquare, isPlayed: checkIfPlayed(index, moves) }
-    : gameIsWon ? { gameIsWon }
+    ? { isLosingSquare, losingSquare, isFlagged, isPlayed: checkIfPlayed(index, moves) }
+    : gameIsWon ? { gameIsWon, isFlagged }
                 : { isPlayed: checkIfPlayed(index, moves), isFlagged }
 }
 
