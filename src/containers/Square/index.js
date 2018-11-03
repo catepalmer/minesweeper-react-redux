@@ -3,23 +3,23 @@ import { equals, filter, find, identity, isNil, not, sort, times } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 import Square from '../../components/Square'
-import { getLosingSquare, getFlags, getMoves, mineClicked, squareClicked, squareRightClicked } from '../../state'
+import { getLosingSquare, getFlagged, getMoves, mineClicked, squareClicked, squareRightClicked } from '../../state'
 import { checkIfAllMinesFlagged, checkIfLosingSquare, checkIfPlayed } from '../../utilities'
 
 function mapStateToProps (state, { index, mines }) {
   const moves = getMoves(state)
   const nonMines = filter((x => isNil(find(equals(x))(mines))), times(identity, 81))
-  const flags = getFlags(state)
-  const allMinesFlagged = checkIfAllMinesFlagged(mines, state)
+  const isFlagged = getFlagged(state)
+  const allMinesFlagged = checkIfAllMinesFlagged(mines, isFlagged)
   const losingSquare = getLosingSquare(state)
   const isLosingSquare = checkIfLosingSquare(index, state)
   const gameIsLost = not(isUndefined(losingSquare))
   const gameIsWon = (equals(sort(((a, b) => a - b), moves), nonMines) && allMinesFlagged)
 
   return gameIsLost
-    ? { isLosingSquare, losingSquare, flags, isPlayed: checkIfPlayed(index, moves) }
-    : gameIsWon ? { gameIsWon, flags }
-                : { isPlayed: checkIfPlayed(index, moves), flags }
+    ? { isLosingSquare, losingSquare, isFlagged, isPlayed: checkIfPlayed(index, moves) }
+    : gameIsWon ? { gameIsWon, isFlagged }
+                : { isPlayed: checkIfPlayed(index, moves), isFlagged }
 }
 
 function mapDispatchToProps (dispatch, { index }) {

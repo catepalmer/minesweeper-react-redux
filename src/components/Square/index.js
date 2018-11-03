@@ -6,7 +6,7 @@ import { isUndefined } from 'ramda-adjunct'
 import flag from '../../images/flag.png'
 import mine from '../../images/mine.png'
 
-import { checkIfFlagged, getMinesTouching } from '../../utilities'
+import { getMinesTouching } from '../../utilities'
 
 const StyledImage = styled.img`
   height: 5vh;
@@ -42,12 +42,12 @@ SquarePlayable.defaultName = 'SquarePlayable'
 
 
 export default function Square ({
-  flags,
   gameIsWon,
   handleClick,
   handleMineClick,
   handleRightClick,
   index,
+  isFlagged,
   isLosingSquare,
   losingSquare,
   isPlayed,
@@ -55,10 +55,9 @@ export default function Square ({
 }) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
-  const isFlagged = checkIfFlagged(index, flags)
-  console.log(`isFlagged: ${isFlagged}, flags: ${flags}`)
+  console.log(`isFlagged for square ${index}: ${isFlagged[index]}, gameIsWon: ${gameIsWon}`)
 
-  if (isFlagged)
+  if (isFlagged[index])
     return <StyledSquare index={index} onContextMenu={handleRightClick}>
              <StyledImage src={flag}></StyledImage>
            </StyledSquare>
