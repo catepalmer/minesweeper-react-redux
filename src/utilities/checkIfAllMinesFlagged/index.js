@@ -1,12 +1,8 @@
-import { append, equals, forEach, sort } from 'ramda'
+import { equals, sort } from 'ramda'
 
-export default function checkIfAllMinesFlagged (mines, { isFlagged }) {
+export default function checkIfAllMinesFlagged (mines, { flags }) {
   const sortedMines = sort(((a, b) => a - b), mines)
-  const sortedFlags = []
-
-  forEach(((val, i) => {
-    if (val) append(i, sortedFlags)
-  }), isFlagged)
+  const sortedFlags = sort(((a, b) => a - b), flags)
 
   return equals(sortedMines, sortedFlags)
 }

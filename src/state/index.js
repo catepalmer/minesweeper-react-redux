@@ -1,12 +1,12 @@
 import { mineClicked, squareClicked, squareRightClicked } from './actions'
 import { MINE_CLICKED, SQUARE_CLICKED, SQUARE_RIGHT_CLICKED } from './constants'
 import { initialState, rootReducer } from './reducers'
-import { getFlagged, getLosingSquare, getMoves } from './selectors'
+import { getFlags, getLosingSquare, getMoves } from './selectors'
 import configureStore from './store'
 
 export {
   configureStore,
-  getFlagged,
+  getFlags,
   getLosingSquare,
   getMoves,
   initialState,

@@ -1,5 +1,5 @@
-export function getFlagged ({ isFlagged }) {
-  return isFlagged
+export function getFlags ({ flags }) {
+  return flags
 }
 
 export function getLosingSquare ({ losingSquare }) {
