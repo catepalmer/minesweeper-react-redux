@@ -5,6 +5,8 @@ import { times } from 'ramda'
 import { Board } from '..'
 import { NewGameButton, Square } from '../../containers'
 
+import { setMines } from '../../utilities'
+
 const StyledApp = styled.div`
   display: grid;
   font-family: 'Verdana', sans-serif;
@@ -16,15 +18,16 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-export default function App ({ mines }) {
-  console.log(`mines: ${mines}`)
+export default function App () {
+  const mines = setMines()
+  console.log(`mines from App component: ${mines}`)
   
   return (
     <StyledApp mines={mines}>
       <Board>
-        {times(square => <Square key={square} index={square} />, 81)}
+        {times(square => <Square key={square} index={square} mine={mines} />, 81)}
       </Board>
-      <NewGameButton />
+      <NewGameButton mines={mines} />
     </StyledApp>
   )
 }

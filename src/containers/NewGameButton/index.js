@@ -6,12 +6,12 @@ import { setMines } from '../../utilities'
 
 function mapStateToProps (state) {
   const mines = getMines(state)
+  console.log(`mines from mapStateToProps: ${mines}`)
   
   return { mines }
 }
 
-function mapDispatchToProps (dispatch) {
-  const mines = setMines()
+function mapDispatchToProps (dispatch, { mines }) {
   console.log(`mines from mapDispatchToProps: ${mines}`)
 
   return {
