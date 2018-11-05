@@ -19,7 +19,7 @@ function mapStateToProps (state, { index, mines }) {
   return gameIsLost
     ? { isLosingSquare, losingSquare, isFlagged, isPlayed: checkIfPlayed(index, moves) }
     : gameIsWon ? { gameIsWon, isFlagged }
-                : { isPlayed: checkIfPlayed(index, moves), isFlagged }
+                : { isPlayed: checkIfPlayed(index, moves), isFlagged, mines }
 }
 
 function mapDispatchToProps (dispatch, { index }) {

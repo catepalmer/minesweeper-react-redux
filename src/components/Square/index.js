@@ -58,7 +58,7 @@ export default function Square ({
   console.log(`isFlagged for square ${index}: ${isFlagged[index]}, gameIsWon: ${gameIsWon}`)
 
   if (isFlagged[index])
-    return <StyledSquare index={index} onContextMenu={handleRightClick}>
+    return <StyledSquare index={index} mines={mines} onContextMenu={handleRightClick}>
              <StyledImage src={flag}></StyledImage>
            </StyledSquare>
 
@@ -68,12 +68,12 @@ export default function Square ({
                                   {(minesTouching === 0) ? ''
                                                          : minesTouching}
                                 </SquarePlayed>
-                     : isPlayed ? <SquarePlayed index={index} minesTouching={minesTouching} >
+                     : isPlayed ? <SquarePlayed index={index} mines={mines} minesTouching={minesTouching} >
                                     {(minesTouching === 0) ? ''
                                                            : minesTouching}
                                   </SquarePlayed>
-                                : isMine ? <SquarePlayable index={index} onClick={handleMineClick} onContextMenu={handleRightClick} />
-                                         : <SquarePlayable index={index} onClick={handleClick} onContextMenu={handleRightClick} />
+                                : isMine ? <SquarePlayable index={index} mines={mines} onClick={handleMineClick} onContextMenu={handleRightClick} />
+                                         : <SquarePlayable index={index} mines={mines} onClick={handleClick} onContextMenu={handleRightClick} />
   }
 
   return isMine
