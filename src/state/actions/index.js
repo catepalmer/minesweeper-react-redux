@@ -1,10 +1,19 @@
-import { MINE_CLICKED, SQUARE_CLICKED, SQUARE_RIGHT_CLICKED } from '..'
+import { MINE_CLICKED, MINES_SET, SQUARE_CLICKED, SQUARE_RIGHT_CLICKED } from '..'
 
 function mineClicked (square) {
   return {
     type: MINE_CLICKED,
     payload: {
       square
+    }
+  }
+}
+
+function minesSet (mines) {
+  return {
+    type: MINES_SET,
+    payload: {
+      mines
     }
   }
 }
@@ -27,4 +36,4 @@ function squareRightClicked (square) {
   }
 }
 
-export { mineClicked, squareClicked, squareRightClicked }
+export { mineClicked, minesSet, squareClicked, squareRightClicked }

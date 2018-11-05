@@ -1,3 +1,4 @@
+import NewGameButton from './NewGameButton'
 import Square from './Square'
 
-export { Square }
+export { NewGameButton, Square }

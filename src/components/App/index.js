@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import { times } from 'ramda'
 
 import { Board } from '..'
-import { Square } from '../../containers'
-
-import { setMines } from '../../utilities'
+import { NewGameButton, Square } from '../../containers'
 
 const StyledApp = styled.div`
   display: grid;
@@ -18,14 +16,15 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-export default function App () {
-  const mines = setMines()
+export default function App ({ mines }) {
+  console.log(`mines: ${mines}`)
   
   return (
-    <StyledApp>
+    <StyledApp mines={mines}>
       <Board>
-        {times(square => <Square key={square} index={square} mines={mines} />, 81)}
+        {times(square => <Square key={square} index={square} />, 81)}
       </Board>
+      <NewGameButton />
     </StyledApp>
   )
 }
