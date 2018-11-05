@@ -3,10 +3,11 @@ import { equals, filter, find, identity, isNil, not, sort, times } from 'ramda'
 import { isUndefined } from 'ramda-adjunct'
 
 import Square from '../../components/Square'
-import { getLosingSquare, getFlagged, getMoves, mineClicked, squareClicked, squareRightClicked } from '../../state'
+import { getLosingSquare, getFlagged, getMines, getMoves, mineClicked, squareClicked, squareRightClicked } from '../../state'
 import { checkIfAllMinesFlagged, checkIfLosingSquare, checkIfPlayed } from '../../utilities'
 
-function mapStateToProps (state, { index, mines }) {
+function mapStateToProps (state, { index }) {
+  const mines = getMines(state)
   const moves = getMoves(state)
   const nonMines = filter((x => isNil(find(equals(x))(mines))), times(identity, 81))
   const isFlagged = getFlagged(state)

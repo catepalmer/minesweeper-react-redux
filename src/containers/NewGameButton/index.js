@@ -7,11 +7,12 @@ import { setMines } from '../../utilities'
 function mapStateToProps (state) {
   const mines = getMines(state)
   
-  return mines
+  return { mines }
 }
 
 function mapDispatchToProps (dispatch) {
   const mines = setMines()
+  console.log(`mines from mapDispatchToProps: ${mines}`)
 
   return {
     handleSubmit: () => dispatch(minesSet(mines))

@@ -55,7 +55,6 @@ export default function Square ({
 }) {
   const isMine = contains(index, mines)
   const minesTouching = getMinesTouching(index, mines)
-  console.log(`isFlagged for square ${index}: ${isFlagged[index]}, gameIsWon: ${gameIsWon}`)
 
   if (isFlagged[index])
     return <StyledSquare index={index} mines={mines} onContextMenu={handleRightClick}>

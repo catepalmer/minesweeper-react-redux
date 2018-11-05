@@ -2,11 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledForm = styled.form`
-  background: teal;
-  color: white;
   font-family: 'Verdana', sans-serif;
-  height: 100vh;
-  width: 100vw;
+  height: 50vh;
+  width: 50vw;
 `
 StyledForm.displayName = 'StyledForm'
 
@@ -14,8 +12,7 @@ export default function NewGameButton ({ handleSubmit }) {
   
   return (
     <StyledForm onSubmit={handleSubmit}>
-      New Game
-      <input type="submit" value="Submit" />
+      <input type="submit" value="New Game" />
     </StyledForm>
   )
 }

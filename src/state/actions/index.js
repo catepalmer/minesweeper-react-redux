@@ -10,6 +10,7 @@ function mineClicked (square) {
 }
 
 function minesSet (mines) {
+  console.log(`mines from action creator: ${mines}`)
   return {
     type: MINES_SET,
     payload: {
