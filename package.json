@@ -6,7 +6,8 @@
     "apollo-server": "^0.1.5",
     "casual": "^1.5.3",
     "cors": "^2.7.1",
-    "express": "4.13.4",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "graphql-tools": "^0.4.2",
     "ramda": "^0.25.0",
@@ -27,13 +28,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "nodemon ./server.js --exec babel-node",
+    "dev": "nodemon ./packages/server/server.js --exec babel-node",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "format": "prettier-standard 'src/**/*js'",
     "precommit": "lint-staged",
-    "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "eject": "react-scripts eject"
   },
   "lint-staged": {
     "linters": {
@@ -54,9 +54,6 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
-    "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-import": "^1.1.0",
-    "eslint-plugin-react": "^4.2.3",
     "graphql": "^0.6.0",
     "husky": "^0.14.3",
     "jest-enzyme": "^6.0.0",
@@ -67,13 +64,6 @@
     "prettier-standard": "^8.0.1",
     "react-test-renderer": "^16.3.1",
     "redux-mock-store": "^1.5.1"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "airbnb/base",
-      "plugin:import/errors"
-    ]
   },
   "jest": {
     "collectCoverageFrom": [
