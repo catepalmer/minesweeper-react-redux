@@ -1,5 +1,4 @@
-const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLInt, GraphQLList, GraphQLSchema, GraphQLString } = graphql
+const { GraphQLObjectType, GraphQLID, GraphQLInt, GraphQLList, GraphQLSchema } = require('graphql')
 const { find } = require('ramda')
 
 // dummy data
@@ -11,7 +10,7 @@ const games = [
 const GameType = new GraphQLObjectType({
   name: 'game',
   fields: () => ({
-    id: { type: GraphQLString },
+    id: { type: GraphQLID },
     flags: { type: new GraphQLList(GraphQLInt) },
     mines: { type: new GraphQLList(GraphQLInt) },
     moves: { type: new GraphQLList(GraphQLInt) }
@@ -23,10 +22,16 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     game: {
       type: GameType,
-      args: { id: { type: GraphQLString } },
+      args: { id: { type: GraphQLID } },
       resolve(parent, args) {
         return find(game => game.id === args.id)(games)
         // code to get data from db
+      }
+    },
+    games: {
+      type: new GraphQLList(GameType),
+      resolve(parent, args){
+        return games
       }
     }
   }
