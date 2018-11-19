@@ -12,7 +12,7 @@ const games = [
 const GameType = new GraphQLObjectType({
   name: 'game',
   fields: () => ({
-    id: { type: GraphQLID },
+    id: { type: GraphQLString },
     flags: { type: new GraphQLList(GraphQLInt) },
     mines: { type: new GraphQLList(GraphQLInt) },
     moves: { type: new GraphQLList(GraphQLInt) }
@@ -24,17 +24,22 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     game: {
       type: GameType,
-      args: { id: { type: GraphQLID } },
+      args: { id: { type: GraphQLString } },
       resolve(parent, args) {
-
-        const game = games.find(args.id => args.id === id)
-        return game
+        return games.find(game => {
+          console.log(`args.id: ${args.id}, game.id: ${game.id}`)
+          return game.id === args.id
+        })
         // code to get data from db
-        // return find({ id: args.id })(games)
       }
     }
   }
 })
+
+
+R.find(R.propEq('a', 4))(xs); //=> undefined
+
+
 
 module.exports = new GraphQLSchema({
   query: RootQuery
