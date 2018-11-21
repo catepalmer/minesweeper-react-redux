@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "apollo-server": "^0.1.5",
+    "body-parser": "^1.18.3",
     "casual": "^1.5.3",
     "cors": "^2.7.1",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
+    "graphql-server-express": "^1.4.0",
     "graphql-tools": "^0.4.2",
+    "pg": "^7.6.1",
+    "pg-hstore": "^2.3.2",
     "ramda": "^0.25.0",
     "ramda-adjunct": "^2.10.0",
     "react": "^16.3.1",
@@ -44,7 +48,7 @@
     }
   },
   "devDependencies": {
-    "babel-cli": "6.5.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.5.2",
     "babel-eslint": "^6.0.0-beta.6",
     "babel-polyfill": "6.5.0",
