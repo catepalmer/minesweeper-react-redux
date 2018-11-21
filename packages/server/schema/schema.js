@@ -47,18 +47,18 @@ const Mutation = new GraphQLObjectType({
   fields: {
     addGame: {
       type: GameType,
-      args: {
-        flags: { type: new GraphQLList(GraphQLInt) },
-        mines: { type: new GraphQLList(GraphQLInt) },
-        moves: { type: new GraphQLList(GraphQLInt) }
-      },
+      // args: {
+        // flags: { type: new GraphQLList(GraphQLInt) },
+        // mines: setMines(),
+      //   moves: { type: new GraphQLList(GraphQLInt) }
+      // },
       resolve(parent, args, { models }) {
         // let game = new Game({
         //   mines: setMines()
         // })
         // let mines = setMines()
         // models.Game.create({ mines })
-        models.Game.create(args)
+        models.Game.create()
       }
     },
     updateGame: {
@@ -78,6 +78,7 @@ const Mutation = new GraphQLObjectType({
 
 
 module.exports = new GraphQLSchema({
+  mutation: Mutation,
   query: RootQuery
 })
 
