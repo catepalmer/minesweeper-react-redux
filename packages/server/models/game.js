@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-  const Game = sequelize.define('game', {
+  const Game = sequelize.define('Game', {
     id: DataTypes.UUIDV1,
     flags: DataTypes.ARRAY(DataTypes.INTEGER),
     mines: DataTypes.ARRAY(DataTypes.INTEGER),
