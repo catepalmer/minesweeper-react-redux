@@ -15,9 +15,16 @@ import schema from './schema/schema'
 
 const app = express()
 
-app.use('/graphql', bodyParser.json(), graphiqlExpress({ schema }))
+app.use('/graphql', bodyParser.json(), graphqlExpress({
+  schema,
+  context: { models }
+  // graphiql: true
+}))
+
+// app.use('/graphql', bodyParser.json(), graphiqlExpress({ schema }))
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
+
 
 models.sequelize.sync().then(() => app.listen(4000, () => {
     console.log('Now listening on port 4000')
