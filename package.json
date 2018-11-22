@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "apollo-server": "^0.1.5",
+    "apollo-server-express": "^2.2.2",
     "body-parser": "^1.18.3",
     "casual": "^1.5.3",
     "cors": "^2.7.1",
@@ -32,7 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "nodemon ./packages/server/server.js --exec babel-node",
+    "dev": "nodemon ./packages/server/index.js --exec babel-node",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "format": "prettier-standard 'src/**/*js'",

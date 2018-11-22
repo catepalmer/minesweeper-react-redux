@@ -1,15 +1,15 @@
-const Sequelize = require('sequelize')
+import Sequelize from 'sequelize'
 
 const sequelize = new Sequelize('minesweeper', 'catherinepalmer', 'cake', {
-    host: 'localhost',
-    dialect: 'postgres'
+  host: 'localhost',
+  dialect: 'postgres'
 })
 
-const db = {
-    Game: sequelize['import']('./game')
+const models = {
+  Game: sequelize.import('./game')
 }
 
-// db.sequelize = sequelize
-// db.Sequelize = Sequelize
+models.sequelize = sequelize
+models.Sequelize = Sequelize
 
-module.exports = db
+export default models

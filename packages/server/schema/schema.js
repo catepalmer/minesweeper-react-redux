@@ -26,8 +26,8 @@ const RootQuery = new GraphQLObjectType({
     game: {
       type: GameType,
       args: { id: { type: GraphQLID } },
-      resolve(parent, { id }, { models }) {
-        models.Game.findOne({ where: { id } })
+      resolve(parent, args, { models }) {
+        models.Game.findOne({ where: args.id })
         // return find(game => game.id === args.id)(games)
         // code to get data from db
       }
@@ -63,12 +63,12 @@ const Mutation = new GraphQLObjectType({
     },
     updateGame: {
       type: GameType,
-      args: {
-        id,
-        flags,
-        mines,
-        moves
-      },
+      // args: {
+      //   id,
+      //   flags,
+      //   mines,
+      //   moves
+      // },
       resolve(parent, args, { models }) {
         models.Game.update(args, { where: { id } })
       }
@@ -76,8 +76,7 @@ const Mutation = new GraphQLObjectType({
   }
 })
 
-
-module.exports = new GraphQLSchema({
+export default new GraphQLSchema({
   mutation: Mutation,
   query: RootQuery
 })
